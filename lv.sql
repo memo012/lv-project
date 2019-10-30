@@ -77,8 +77,8 @@ CREATE TABLE `lv_user`  (
   `lv_user_password` varchar(17) CHARACTER SET  'utf8'  NOT NULL COMMENT '学生密码',
   `lv_user_name` varchar(9) CHARACTER SET  'utf8'  NOT NULL COMMENT '学生姓名',
   `lv_user_phone` char(11) CHARACTER SET  'utf8'  NOT NULL COMMENT '学生手机号',
-  `lv_teachaer_name` varchar(9) CHARACTER SET  'utf8'  NOT NULL,
-  `lv_user_createtime` varchar(20) CHARACTER SET  'utf8'  NOT NULL COMMENT '学生创建时间',
+  `lv_teacher_name` varchar(9) CHARACTER SET  'utf8'  NOT NULL,
+  `lv_user_create_time` varchar(20) CHARACTER SET  'utf8'  NOT NULL COMMENT '学生创建时间',
   PRIMARY KEY (`lv_user_id`, `lv_user_num`) USING BTREE
 ) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
