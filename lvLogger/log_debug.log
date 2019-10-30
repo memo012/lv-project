@@ -1,0 +1,70 @@
+2019-10-30 17:15:30.449 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:15:30.508 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:15:30.563 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:16:58.630 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:16:58.676 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:16:58.721 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:19:32.630 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:19:32.693 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:19:32.749 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:20:57.962 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:20:58.018 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:20:58.067 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:23:32.058 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:23:32.107 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:23:32.152 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:24:45.964 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:24:46.019 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:24:46.069 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:28:18.502 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:28:18.561 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:28:18.604 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:34:21.780 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:34:21.829 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:34:21.874 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:39:07.244 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:39:07.290 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:39:07.329 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 0
+2019-10-30 17:55:10.805 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_use values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 17:55:10.859 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572429310(String), 1223(String), 123(String), 测试(String), 4444(String), 老师(String), 2019-10-30 17:55:10(String)
+2019-10-30 17:56:03.780 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 17:56:03.829 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572429363(String), 1223(String), 123(String), 测试(String), 4444(String), 老师(String), 2019-10-30 17:56:03(String)
+2019-10-30 17:56:03.885 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - <==    Updates: 1
+2019-10-30 17:56:03.891 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 17:56:03.892 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 17:56:03.935 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 1
+2019-10-30 21:08:42.773 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 21:08:42.890 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572440922(String), 1223(String), 123(String), 测试(String), 4444(String), 老师(String), 2019-10-30 21:08:42(String)
+2019-10-30 21:13:39.965 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 21:13:40.028 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572441219(String), 1223(String), 123(String), 测试(String), 4444(String), 老师(String), 2019-10-30 21:13:39(String)
+2019-10-30 21:15:08.457 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 21:15:08.511 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572441308(String), 1223(String), 123(String), 5555(String), 4444(String), 老师(String), 2019-10-30 21:15:08(String)
+2019-10-30 21:17:00.796 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 21:17:00.847 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572441420(String), 1223(String), 123(String), 5555(String), 4444(String), 77(String), 2019-10-30 21:17:00(String)
+2019-10-30 21:17:00.910 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - <==    Updates: 1
+2019-10-30 21:17:00.916 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 21:17:00.916 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 21:17:00.988 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 2
+2019-10-30 21:17:33.968 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 21:17:34.018 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572441453(String), 1223(String), 123(String), 5555(String), 4444(String), 好(String), 2019-10-30 21:17:33(String)
+2019-10-30 21:18:49.204 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 21:18:49.254 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572441529(String), 1223(String), 123(String), 5555(String), 4444(String), 好(String), 2019-10-30 21:18:49(String)
+2019-10-30 21:20:19.414 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 21:20:19.468 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572441619(String), 1223(String), 123(String), 5555(String), 4444(String), 好(String), 2019-10-30 21:20:19(String)
+2019-10-30 21:21:04.939 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 21:21:05.014 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572441664(String), 1223(String), 123(String), 5555(String), 4444(String), 好(String), 2019-10-30 21:21:04(String)
+2019-10-30 22:08:53.107 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 22:08:53.180 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572444533(String), 1223(String), 123(String), 5555(String), 4444(String), 好(String), 2019-10-30 22:08:53(String)
+2019-10-30 22:08:53.232 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - <==    Updates: 1
+2019-10-30 22:08:53.238 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 22:08:53.238 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 22:08:53.277 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 2
+2019-10-30 22:09:49.938 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==>  Preparing: insert into lv_user values (?, ?, ? , ?, ?, ? , ?) 
+2019-10-30 22:09:50.017 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - ==> Parameters: 1572444589(String), 1223(String), 123(String), 5555(String), 4444(String), 好(String), 2019-10-30 22:09:49(String)
+2019-10-30 22:09:50.070 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.insUser - <==    Updates: 1
+2019-10-30 22:09:50.080 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 22:09:50.081 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 22:09:50.160 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 3
+2019-10-30 22:11:28.589 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==>  Preparing: select * from lv_user 
+2019-10-30 22:11:28.646 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - ==> Parameters: 
+2019-10-30 22:11:28.695 [main] DEBUG com.lv.adminsys.modules.dao.TestDao.testAnnotation - <==      Total: 3

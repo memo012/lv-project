@@ -1,0 +1,24 @@
+###########################
+######### 模式匹配
+##########################
+spring:
+  profiles:
+    # 环境 dev|test|prod
+    active: dev
+
+#########################
+######## mybatis
+#########################
+
+
+#############################
+###### mybatis-plus配置
+#############################
+mybatis-plus:
+  mapper-locations: classpath:mappering/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  type-aliases-package: com.lv.adminsys.modules.entity
+  global-config:
+    db-config:
+      table-underline: true
+      db-type: mysql

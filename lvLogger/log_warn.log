@@ -1,0 +1,30 @@
+2019-10-30 17:15:24.362 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:16:52.756 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:19:24.976 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:20:51.282 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:20:58.071 [main] WARN  com.lv.adminsys.modules.ModulesApplicationTests - 测试成功
+2019-10-30 17:23:24.520 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:23:32.156 [main] WARN  com.lv.adminsys.modules.ModulesApplicationTests - 测试成功
+2019-10-30 17:24:40.580 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:28:12.570 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:34:16.482 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:39:02.159 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:39:07.333 [main] WARN  com.lv.adminsys.modules.ModulesApplicationTests - 测试成功
+2019-10-30 17:55:05.083 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:55:58.305 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 17:56:03.938 [main] WARN  com.lv.adminsys.modules.ModulesApplicationTests - 测试成功
+2019-10-30 21:08:33.164 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 21:13:34.299 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 21:15:02.709 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 21:16:54.872 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 21:17:00.991 [main] WARN  com.lv.adminsys.modules.ModulesApplicationTests - 测试成功
+2019-10-30 21:17:28.093 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 21:18:43.338 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 21:20:13.834 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 21:20:56.903 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 22:08:46.817 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 22:08:53.279 [main] WARN  com.lv.adminsys.modules.ModulesApplicationTests - 测试成功
+2019-10-30 22:09:43.667 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 22:09:50.164 [main] WARN  com.lv.adminsys.modules.ModulesApplicationTests - 测试成功
+2019-10-30 22:11:22.875 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-10-30 22:11:28.699 [main] WARN  com.lv.adminsys.modules.ModulesApplicationTests - 测试成功
