@@ -55,7 +55,7 @@ public class LvLeaveEntity implements Serializable {
     /**
      * 请假天数
      */
-    private Integer lvDay;
+    private float lvDay;
 
     /**
      * 请假截止时间

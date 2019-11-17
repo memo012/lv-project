@@ -96,7 +96,6 @@ public class LeaveService {
     // #{leaveService.changeStatus(execution, 'pass')}
 
     public void changeStatus(DelegateExecution delegateExecution, String status) {
-        System.out.println("现在应该修改请假单状态,状态为:" + status);
         String id = delegateExecution.getProcessInstanceBusinessKey();
         LvLeaveEntity leaveEntity = lvLeaveDao.selectOne(new QueryWrapper<LvLeaveEntity>().eq("lv_id", id));
         // 修改状态
@@ -118,7 +117,7 @@ public class LeaveService {
 
     /**
      * 启动流程
-     *
+     *smallLeave
      * @param id 请假单ID
      * @return
      */
@@ -132,14 +131,32 @@ public class LeaveService {
     }
 
     /**
+     * 启动流程
+     *
+     * @param id 请假单ID
+     * @return
+     */
+    public ProcessInstance startSmallProcess(String id) {
+        ProcessInstance leaveProcess = runtimeService.startProcessInstanceByKey("smallLeave", id);
+        String processInstanceId = leaveProcess.getProcessInstanceId();
+        LvLeaveEntity lvLeaveEntity = lvLeaveDao.selectById(id);
+        lvLeaveEntity.setLvProcessInstanceId(processInstanceId);
+        lvLeaveDao.updateById(lvLeaveEntity);
+        return leaveProcess;
+    }
+
+
+    /**
      * 查询代办
      *
      * @param userId 审核人ID
      * @return
      */
     public List<Task> findTaskByUserId(String userId) {
-        List<Task> list = taskService.createTaskQuery().processDefinitionKey("leaveProcess").taskCandidateOrAssigned(userId).list();
-        return list;
+        List<Task> list1 = taskService.createTaskQuery().processDefinitionKey("smallLeave").taskCandidateOrAssigned(userId).list();
+        List<Task> list2 = taskService.createTaskQuery().processDefinitionKey("leaveProcess").taskCandidateOrAssigned(userId).list();
+        list2.addAll(list1);
+        return list2;
     }
 
     /**

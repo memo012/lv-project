@@ -65,8 +65,14 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
         String id = new TimeUtil().getLongTime();
         lvLeaveEntity.setLvId(id);
         lvLeaveDao.insert(lvLeaveEntity);
+        ProcessInstance processInstance = null;
         // 启动流程时 要和业务进行关联
-        ProcessInstance processInstance = leaveService.startProcess(id);
+        if(lvLeaveEntity.getLvDay() > 1){
+            processInstance = leaveService.startProcess(id);
+        }
+        else{
+            processInstance = leaveService.startSmallProcess(id);
+        }
         return processInstance != null;
     }
 
@@ -145,9 +151,9 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
         }
         for (LvTeacherEntity lv :
                 lv_teacher_role) {
-            leaderName = lv.getLvTeacherName() + "/";
-            leaderWorkTime = lv.getLvTeacherWorkTime() + "/";
-            leaderLocation = lv.getLvTeacherLocation() + "/";
+            leaderName += lv.getLvTeacherName() + "/";
+            leaderWorkTime += lv.getLvTeacherWorkTime() + "/";
+            leaderLocation += lv.getLvTeacherLocation() + "/";
         }
         leaderName = leaderName.substring(0, leaderName.lastIndexOf("/"));
         leaderWorkTime = leaderWorkTime.substring(0, leaderWorkTime.lastIndexOf("/"));
