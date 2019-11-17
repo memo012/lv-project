@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *  老师实体类
  * </p>
  *
  * @author qiang
@@ -61,5 +61,9 @@ public class LvTeacherEntity implements Serializable {
      */
     private String lvTeacherCreateTime;
 
+    /**
+     * 老师(领导)角色
+     */
+    private Integer lvRole;
 
 }

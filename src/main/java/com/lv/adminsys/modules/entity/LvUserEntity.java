@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *  学生表
  * </p>
  *
  * @author qiang
@@ -47,14 +47,18 @@ public class LvUserEntity implements Serializable {
     private String lvUserPhone;
 
     /**
-     * 老师姓名
+     * 老师工号
      */
-    private String lvTeacherName;
+    private String lvTeacherNum;
 
     /**
      * 学生创建时间
      */
     private String lvUserCreateTime;
 
+    /**
+     * 学生角色
+     */
+    private Integer lvRole;
 
 }

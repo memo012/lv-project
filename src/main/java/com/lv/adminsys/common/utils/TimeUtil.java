@@ -1,9 +1,14 @@
 package com.lv.adminsys.common.utils;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * @Author: qiang
@@ -13,6 +18,28 @@ import java.util.Date;
  * @Date: 2019/7/4 0004 11:05
  **/
 public class TimeUtil {
+
+    /**
+     *  日期转星期
+     * @param datetime
+     * @return
+     */
+    public static String dateToWeek(String datetime) {
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String[] weekDays = { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
+        Calendar cal = Calendar.getInstance(); // 获得一个日历
+        Date datet = null;
+        try {
+            datet = f.parse(datetime);
+            cal.setTime(datet);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        int w = cal.get(Calendar.DAY_OF_WEEK) - 1; // 指示一个星期中的某天。
+        if (w < 0)
+            w = 0;
+        return weekDays[w];
+    }
 
     /**
      * 格式化日期
@@ -33,6 +60,7 @@ public class TimeUtil {
      */
     public String getFormatDateForSix(){
         LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return now.format(format);
     }
@@ -43,7 +71,6 @@ public class TimeUtil {
      * @return “年-月-日 时:分”字符串
      */
     public String getFormatDateForFive(){
-
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         return now.format(format);
@@ -55,7 +82,7 @@ public class TimeUtil {
      * @return
      */
     public LocalDate getParseDateForThree(String date){
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return LocalDate.parse(date, format);
     }
 
@@ -68,6 +95,17 @@ public class TimeUtil {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return now.format(format);
+    }
+
+    /**
+     * 解析日期
+     * 日期 2018-06-21 12:01:25
+     * @param data 日期date类型
+     * @return
+     */
+    public String getParseDateForSix(Date data){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        return sdf.format(data);
     }
 
     /**
@@ -105,8 +143,21 @@ public class TimeUtil {
         s.append(str.substring(5,7));
         return String.valueOf(s);
     }
+
+    /**
+     * CST转变成字符串日期
+     * @param str Thu May 07 14:33:19 CST 2015
+     * @return
+     * @throws ParseException
+     */
+    public String CSTChangeString(String str) throws ParseException {
+        String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
+        SimpleDateFormat df = new SimpleDateFormat(pattern,Locale.US);
+        Date date = df.parse(str);
+        return new TimeUtil().getParseDateForSix(date);
+    }
     
-    public static void main(String[] args){
-        System.out.println(new TimeUtil().getParseDateForSix());
+    public static void main(String[] args) throws ParseException {
+        System.out.println(new TimeUtil().CSTChangeString("Sat Nov 16 16:15:19 CST 2019"));
     }
 }

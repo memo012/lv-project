@@ -1,5 +1,6 @@
 package com.lv.adminsys.modules.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -8,14 +9,14 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *  请假申请实体类
  * </p>
  *
  * @author qiang
  * @since 2019-10-30
  */
 @Data
-@TableName(value = "lv_table")
+@TableName(value = "lv_leave")
 public class LvLeaveEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -25,6 +26,11 @@ public class LvLeaveEntity implements Serializable {
      */
     @TableId("lv_id")
     private String lvId;
+
+    /**
+     * 请假人学号
+     */
+    private String lvUserNum;
 
     /**
      * 亲属关系
@@ -62,9 +68,9 @@ public class LvLeaveEntity implements Serializable {
     private String lvReason;
 
     /**
-     * 请假进度（0 - 未通过 1 - 已通过）
+     * 请假进度(reject - 未通过 ing - 审批中 pass - 已通过）
      */
-    private Integer lvProgress = 0;
+    private String lvStatus;
 
     /**
      * 上传附件
@@ -75,6 +81,22 @@ public class LvLeaveEntity implements Serializable {
      * 请假创建时间
      */
     private String lvCreateTime;
+
+    /**
+     * 请假流程实例id
+     */
+    private String lvProcessInstanceId;
+
+    /**
+     * 审批结束时间
+     */
+    private String lvApproveEndTime;
+
+    /**
+     * 任务ID
+     */
+    @TableField(exist = false)
+    private String taskId;
 
 
 }

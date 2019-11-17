@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *  老师审核表
  * </p>
  *
  * @author qiang
@@ -30,16 +30,6 @@ public class LvCheckEntity implements Serializable {
      * 老师工号
      */
     private String lvTeacherNum;
-
-    /**
-     * 老师姓名
-     */
-    private String lvTeacherName;
-
-    /**
-     * 学生学号
-     */
-    private String lvUserNum;
 
     /**
      * 是否审核通过(1 -成功 0 -失败)

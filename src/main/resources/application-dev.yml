@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost/lv?useSSL=FALSE&serverTimezone=UTC&
+    url: jdbc:mysql://localhost/leave?useSSL=FALSE&serverTimezone=UTC
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -13,6 +13,7 @@ spring:
       stat-view-servlet: #　访问监控网页的登录用户名和密码
         login-username: druid
         login-password: druid
+
 
 
 ######################################

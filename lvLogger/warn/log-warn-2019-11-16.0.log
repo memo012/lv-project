@@ -1,0 +1,107 @@
+2019-11-16 13:25:04.534 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 13:27:26.126 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 14:10:14.767 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 14:10:22.051 [main] WARN  org.activiti.engine.impl.bpmn.parser.BpmnParse - Following warnings encountered during process validation: [Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = leaveProcess | id = _5 |  | activityName = ExclusiveGateway | ] ( line: 7, column: 87)
+[Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = leaveProcess | id = _7 |  | activityName = ExclusiveGateway | ] ( line: 9, column: 87)
+
+2019-11-16 14:11:49.798 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:16:07.954 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:19:53.367 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:21:58.276 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:23:02.356 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:23:42.308 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:24:34.255 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:27:02.037 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:29:18.836 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:32:44.932 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:35:20.101 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:37:24.764 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:48:39.213 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 15:50:19.652 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 16:01:31.662 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 16:03:36.549 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 16:10:31.265 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 16:13:08.970 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 16:15:58.914 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 16:16:39.067 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 16:49:17.059 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:02:09.333 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:08:54.618 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:12:49.828 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:15:35.545 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:18:55.336 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:19:16.303 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:39:56.867 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:46:44.162 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:49:37.294 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:50:44.742 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:53:46.224 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 17:54:39.103 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 18:05:27.347 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 19:23:22.153 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 20:14:47.234 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 20:14:51.099 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-11-16 20:18:03.194 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 20:18:06.924 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.lv.adminsys.common.security.JwtUtil' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-11-16 20:19:06.921 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 20:19:10.694 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 20:23:33.226 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 20:23:37.025 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 20:24:28.498 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 20:24:32.465 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 20:25:20.769 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 20:25:24.556 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 20:26:25.510 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 20:26:29.359 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 21:07:09.333 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 21:07:14.184 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 21:30:25.717 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 21:30:29.728 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 21:34:29.539 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 21:34:33.175 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 21:52:57.113 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 21:53:01.341 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:04:21.214 [http-nio-8080-exec-1] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2019-11-16 22:10:23.499 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:10:28.281 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:18:52.474 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:18:57.811 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:20:42.848 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:20:46.807 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:21:34.247 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:21:37.982 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:22:38.276 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:22:42.014 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:23:31.686 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:23:35.602 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:24:28.295 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:24:35.567 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:24:52.202 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:24:56.054 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:25:26.678 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:25:33.820 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:26:39.171 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:26:43.403 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:27:48.486 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:27:53.023 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:30:07.882 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:30:30.451 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:30:35.720 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:36:51.459 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:36:55.315 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:41:40.342 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:41:47.293 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:43:08.875 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:43:13.588 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:47:13.749 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:47:18.157 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:50:08.431 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:50:12.340 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:50:55.407 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:50:59.851 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:52:56.318 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:53:00.168 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:54:43.138 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:54:46.935 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
+2019-11-16 22:55:23.541 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys.modules]' package. Please check your configuration.
+2019-11-16 22:55:27.895 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
