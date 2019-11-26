@@ -24,13 +24,3 @@ mybatis-plus:
     db-config:
       table-underline: true
       db-type: mysql
-
-
-#####################################
-########### JWT配置
-#####################################
-jwt:
-  config:
-    key: security
-    ttl: 3600000
-

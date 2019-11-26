@@ -1,12 +1,14 @@
 package com.lv.adminsys.modules.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * @Author: qiang
@@ -25,6 +27,7 @@ public class LvRolesEntity implements Serializable {
     /**
      * 角色id
      */
+    @TableId("rid")
     private Integer rid;
 
     /**
@@ -36,7 +39,7 @@ public class LvRolesEntity implements Serializable {
      * 一个角色对应多个权限
      */
     @TableField(exist = false)
-    private LvPermissionEntity permissionSet;
+    private Set<LvPermissionEntity> permissionSet;
 
 
 }

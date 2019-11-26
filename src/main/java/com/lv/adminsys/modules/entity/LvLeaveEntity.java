@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
 
@@ -53,9 +54,9 @@ public class LvLeaveEntity implements Serializable {
     private String lvBeginTime;
 
     /**
-     * 请假天数
+     *  请假理由详情
      */
-    private float lvDay;
+    private String lvApplyDetail;
 
     /**
      * 请假截止时间
@@ -82,15 +83,21 @@ public class LvLeaveEntity implements Serializable {
      */
     private String lvCreateTime;
 
+
+    /**
+     * 结束时间时间戳
+     */
+    private String lvEndTimeLong;
+
+    /**
+     *  请假长度 (一天以内, 一天以上三天以下, 三天以上一周之内, 一周以上)
+     */
+    private String lvLength;
+
     /**
      * 请假流程实例id
      */
     private String lvProcessInstanceId;
-
-    /**
-     * 审批结束时间
-     */
-    private String lvApproveEndTime;
 
     /**
      * 任务ID
@@ -98,5 +105,11 @@ public class LvLeaveEntity implements Serializable {
     @TableField(exist = false)
     private String taskId;
 
+    public boolean createValidate(){
+        return StringUtils.isNotEmpty(lvUserNum) && StringUtils.isNotEmpty(lvRelativeType)
+                && StringUtils.isNotEmpty(lvRelativeName) && StringUtils.isNotEmpty(lvRelativePhone)
+                && StringUtils.isNotEmpty(lvBeginTime) && StringUtils.isNotEmpty(lvLength)
+                && StringUtils.isNotEmpty(lvEndTime) && StringUtils.isNotEmpty(lvReason);
+    }
 
 }

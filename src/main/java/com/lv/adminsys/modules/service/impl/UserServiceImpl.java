@@ -1,17 +1,19 @@
 package com.lv.adminsys.modules.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.lv.adminsys.common.constant.Constant;
+import com.lv.adminsys.common.constant.LvException;
+import com.lv.adminsys.common.utils.JSONResult;
+import com.lv.adminsys.common.utils.JWTUtil;
+import com.lv.adminsys.common.utils.RedisOperator;
 import com.lv.adminsys.common.utils.TimeUtil;
-import com.lv.adminsys.common.security.JwtUtil;
-import com.lv.adminsys.modules.dao.LvRoleDao;
 import com.lv.adminsys.modules.dao.LvUserDao;
-import com.lv.adminsys.modules.entity.LvRolesEntity;
 import com.lv.adminsys.modules.entity.LvUserEntity;
 import com.lv.adminsys.modules.service.IUserService;
+import com.lv.adminsys.modules.shiro.ShiroEncrypt;
 import com.lv.adminsys.modules.vo.login.UserLoginRequest;
 import com.lv.adminsys.modules.vo.login.UserLoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,11 +35,10 @@ public class UserServiceImpl implements IUserService {
     private LvUserDao lvUserDao;
 
     @Autowired
-    private BCryptPasswordEncoder encoder;
+    private RedisOperator redisOperator;
 
     @Autowired
     private HttpServletRequest request;
-
 
     @Override
     public int deleteByUserName(String userName) {
@@ -51,35 +52,48 @@ public class UserServiceImpl implements IUserService {
         return 0;
     }
 
-    @Resource
-    private JwtUtil jwtUtil;
-
-    @Autowired
-    private LvRoleDao lvRoleDao;
 
     @Override
     public boolean registerUser(LvUserEntity lvUserEntity) {
         lvUserEntity.setLvUserId(new TimeUtil().getLongTime());
         lvUserEntity.setLvUserCreateTime(new TimeUtil().getFormatDateForThree());
         lvUserEntity.setLvRole(1);
-        lvUserEntity.setLvUserPassword(encoder.encode(lvUserEntity.getLvUserPassword()));
         lvUserDao.insert(lvUserEntity);
         return false;
     }
 
     @Override
-    public UserLoginResponse userLogin(UserLoginRequest loginRequest) {
-        LvUserEntity result = lvUserDao.selectOne(new QueryWrapper<LvUserEntity>().eq("lv_user_num", loginRequest.getLvUserNum()));
-        if(result != null && encoder.matches(loginRequest.getLvUserPassword(), result.getLvUserPassword())){
-            LvRolesEntity lv_role = lvRoleDao.selectOne(new QueryWrapper<LvRolesEntity>().eq("rid", result.getLvRole()));
-            String token = jwtUtil.createJwt(result.getLvUserId(), result.getLvUserName(), lv_role.getLvRname());
-            return new UserLoginResponse(
-                    result.getLvUserNum(), result.getLvUserName(),
-                    result.getLvUserPhone(), token,
-                    lv_role.getLvRname()
-            );
+    public LvUserEntity findUserMsgByUserNum(String userNum) {
+        LvUserEntity userEntity = null;
+        if(redisOperator.hasHkey(Constant.Redis.USER_MESSAGE, userNum)){
+            userEntity = (LvUserEntity)redisOperator.hget(Constant.Redis.USER_MESSAGE, userNum);
+        }else{
+            userEntity = lvUserDao.findUseMsgByUserNum(userNum);
+            redisOperator.hset(Constant.Redis.USER_MESSAGE, userNum, userEntity);
         }
-        return null;
+        return userEntity;
+    }
+
+    @Override
+    public JSONResult userLogin(UserLoginRequest loginRequest) {
+        if(!loginRequest.createValidate()){
+            return JSONResult.build(402, LvException.ErrorMsg.REQUEST_PARAM_ERROR, null);
+        }
+        String password = ShiroEncrypt.encrypt(loginRequest.getLvUserNum(), loginRequest.getLvUserPassword());
+        LvUserEntity userEntity = lvUserDao.selectOne(
+                new QueryWrapper<LvUserEntity>()
+                        .eq("lv_user_num", loginRequest.getLvUserNum())
+                        .eq("lv_user_password", password)
+        );
+        if(userEntity == null){
+            return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
+        }
+        return JSONResult.ok(
+                new UserLoginResponse(
+                        userEntity.getLvUserNum(), userEntity.getLvUserName(),
+                        userEntity.getLvUserPhone(), JWTUtil.sign(userEntity.getLvUserNum(), userEntity.getLvUserPassword())
+                )
+        );
     }
 
     @Override

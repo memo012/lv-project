@@ -1,13 +1,10 @@
 package com.lv.adminsys.modules.controller;
 
 import com.lv.adminsys.common.utils.JSONResult;
-import com.lv.adminsys.common.constant.LvException;
 import com.lv.adminsys.modules.entity.LvLeaveEntity;
 import com.lv.adminsys.modules.service.IUserLeaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * @Author: qiang
@@ -18,7 +15,7 @@ import java.util.List;
  **/
 @RestController
 @RequestMapping("api/v1/leave/")
-public class UserLeaveController {
+public class UserLeaveController extends BaseController {
 
     @Autowired
     private IUserLeaveService userLeaveService;
@@ -31,15 +28,7 @@ public class UserLeaveController {
      */
     @PostMapping("applyLeave")
     public JSONResult applyLeave(@RequestBody LvLeaveEntity lvLeaveEntity){
-        boolean b = userLeaveService.queryIsExist(lvLeaveEntity.getLvUserNum());
-        if(!b){
-            return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
-        }
-        boolean result = userLeaveService.applyLeave(lvLeaveEntity);
-        if(result){
-            return JSONResult.ok();
-        }
-        return JSONResult.errorMsg("新增失败");
+        return userLeaveService.applyLeave(lvLeaveEntity);
     }
 
     /**
@@ -49,41 +38,51 @@ public class UserLeaveController {
      */
     @GetMapping("queryUserIsPass")
     public JSONResult queryUserIsPass(@RequestParam("lv_id") String lvId){
-        LvLeaveEntity result = userLeaveService.queryUserIsPass(lvId);
-        if(result == null){
-            return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
-        }
-        return JSONResult.ok(result);
+        return userLeaveService.queryUserIsPass(lvId);
     }
 
 
     /**
      *  查询学生请假列表
      * @param userNum 学生学号
+     * @param status 状态码  --  未过期(now) 和 历史(history)
      * @return
      */
     @GetMapping("queryUserApplyList")
-    public JSONResult queryUserApplyList(@RequestParam("lv_user_num") String userNum){
-        boolean b = userLeaveService.queryIsExist(userNum);
-        if (!b) {
-            return JSONResult.build(402, LvException.ErrorMsg.REQUEST_PARAM_ERROR, null);
-        }
-        List<LvLeaveEntity> result = userLeaveService.queryUserApplyList(userNum);
-        if(result == null){
-            return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
-        }
-        return JSONResult.ok(result);
+    public JSONResult queryUserApplyList(@RequestParam("lvUserNum") String userNum, @RequestParam("status") String status){
+        return userLeaveService.queryUserApplyList(userNum, status);
     }
 
 
     /**
      *  查询学生请假进程(详情)
-     * @param lvId
+     * @param lvId  请假id
+     * @param state 状态码    --  未过期(now) 和 历史(history)
      * @return
      */
     @GetMapping("queryUserProcess")
-    public JSONResult queryUserProcess(@RequestParam("lv_id") String lvId){
-        return userLeaveService.queryUserProcess(lvId);
+    public JSONResult queryUserProcess(@RequestParam("lvId") String lvId, @RequestParam("state") String state){
+        return userLeaveService.queryUserProcess(lvId, state);
+    }
+
+    /**
+     *  我的请假条列表(已通过的)
+     * @param uerNum 学号
+     * @return
+     */
+    @GetMapping("queryApplyListByUserNum")
+    public JSONResult queryApplyListByUserNum(@RequestParam("lvUserNum") String uerNum){
+        return userLeaveService.queryApplyListByUserNum(uerNum);
+    }
+
+    /**
+     *  我的请假条详情
+     * @param lvId  学号
+     * @return
+     */
+    @GetMapping("queryApplyDetailByUserNum")
+    public JSONResult queryApplyDetailByUserNum(@RequestParam("lvId") String lvId) {
+        return userLeaveService.queryApplyDetailByUserNum(lvId);
     }
 
 

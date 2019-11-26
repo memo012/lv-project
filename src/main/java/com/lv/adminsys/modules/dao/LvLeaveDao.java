@@ -1,8 +1,13 @@
 package com.lv.adminsys.modules.dao;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lv.adminsys.modules.entity.LvLeaveEntity;
+import com.lv.adminsys.modules.vo.leave.LeaveDetailResponse;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @Author: qiang
@@ -13,4 +18,6 @@ import org.springframework.stereotype.Repository;
  **/
 @Repository
 public interface LvLeaveDao extends BaseMapper<LvLeaveEntity> {
+
+
 }

@@ -1,6 +1,5 @@
 package com.lv.adminsys.common.utils;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -109,6 +108,17 @@ public class TimeUtil {
     }
 
     /**
+     * 解析日期
+     * 日期 2018-06-21
+     * @param data 日期date类型
+     * @return
+     */
+    public String getParseDateForFour(Date data){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        return sdf.format(data);
+    }
+
+    /**
      * 获得当前时间的时间戳
      * @return 时间戳
      */
@@ -156,8 +166,34 @@ public class TimeUtil {
         Date date = df.parse(str);
         return new TimeUtil().getParseDateForSix(date);
     }
+
+    /**
+     * 字符串日期变相应字符串日期
+     * @param str 2019-11-09 17:06:50
+     * @return 2019-11-09
+     * @throws ParseException
+     */
+    public String StringFourTime(String str) throws ParseException {
+        String pattern = "yyyy-MM-dd";
+        SimpleDateFormat df = new SimpleDateFormat(pattern);
+        Date date = df.parse(str);
+        return getParseDateForFour(date);
+    }
+
+    /**
+     * 字符串日期变时间戳
+     * @param str Thu May 07 14:33:19 CST 2015
+     * @return
+     * @throws ParseException
+     */
+    public String StringToLongTime(String str) throws ParseException {
+        String pattern = "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat df = new SimpleDateFormat(pattern);
+        Date date = df.parse(str);
+        return String.valueOf(date.getTime()/1000);
+    }
     
     public static void main(String[] args) throws ParseException {
-        System.out.println(new TimeUtil().CSTChangeString("Sat Nov 16 16:15:19 CST 2019"));
+        System.out.println(new TimeUtil().StringFourTime("2019-11-09 17:06:50"));
     }
 }

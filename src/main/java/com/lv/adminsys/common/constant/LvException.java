@@ -14,6 +14,9 @@ public class LvException {
         public static final String SAME_NAME_ERROR="存在同名用户";
         public static final String CAN_ONT_FIND_RECORD="找不到数据记录";
         public static final String REQUEST_OVERTIME="请求超时";
+        public static final String DATE_ERROR="日期错误";
+        public static final String TOKEN_OVERTIME="Token失效";
+        public static final String USER_NO_LOGIN="用户未登录";
     }
 
 }

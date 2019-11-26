@@ -4,6 +4,7 @@ import com.lv.adminsys.common.utils.TimeUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
 
@@ -37,6 +38,10 @@ public class UserLoginRequest implements Serializable {
         this.id = new TimeUtil().getLongTime();
         this.lvUserNum = lvUserNum;
         this.lvUserPassword = lvUserPassword;
+    }
+
+    public boolean createValidate(){
+        return StringUtils.isNotEmpty(lvUserNum) && StringUtils.isNotEmpty(lvUserPassword);
     }
 
 }

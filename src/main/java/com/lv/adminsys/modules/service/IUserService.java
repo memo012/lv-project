@@ -1,5 +1,6 @@
 package com.lv.adminsys.modules.service;
 
+import com.lv.adminsys.common.utils.JSONResult;
 import com.lv.adminsys.modules.entity.LvUserEntity;
 import com.lv.adminsys.modules.vo.login.UserLoginRequest;
 import com.lv.adminsys.modules.vo.login.UserLoginResponse;
@@ -18,7 +19,7 @@ public interface IUserService {
      * @param request
      * @return
      */
-    UserLoginResponse userLogin(UserLoginRequest request);
+    JSONResult userLogin(UserLoginRequest request);
 
     /**
      *  判断该学生是否存在
@@ -33,6 +34,13 @@ public interface IUserService {
      * @return
      */
     boolean registerUser(LvUserEntity lvUserEntity);
+
+    /**
+     *  通过学号查询
+     * @param userNum 学号
+     * @return
+     */
+    LvUserEntity findUserMsgByUserNum(String userNum);
 
     /**
      * 删除

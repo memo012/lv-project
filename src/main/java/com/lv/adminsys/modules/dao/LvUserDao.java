@@ -13,4 +13,12 @@ import org.springframework.stereotype.Repository;
  **/
 @Repository
 public interface LvUserDao extends BaseMapper<LvUserEntity> {
+
+    /**
+     *  通过学号查询
+     * @param userNum 学号
+     * @return
+     */
+    LvUserEntity findUseMsgByUserNum(String userNum);
+
 }

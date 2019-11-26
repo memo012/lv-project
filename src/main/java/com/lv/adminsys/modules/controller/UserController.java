@@ -1,11 +1,9 @@
 package com.lv.adminsys.modules.controller;
 
 import com.lv.adminsys.common.utils.JSONResult;
-import com.lv.adminsys.common.constant.LvException;
 import com.lv.adminsys.modules.entity.LvUserEntity;
 import com.lv.adminsys.modules.service.IUserService;
 import com.lv.adminsys.modules.vo.login.UserLoginRequest;
-import com.lv.adminsys.modules.vo.login.UserLoginResponse;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -19,7 +17,7 @@ import javax.annotation.Resource;
  **/
 @RestController
 @RequestMapping("api/v1/user/")
-public class UserController {
+public class UserController extends BaseController {
 
     @Resource
     private IUserService iUserService;
@@ -31,11 +29,7 @@ public class UserController {
      */
     @PostMapping("login/userLogin")
     public JSONResult userLogin(@RequestBody UserLoginRequest userLoginRequest){
-        UserLoginResponse userLoginResponse = iUserService.userLogin(userLoginRequest);
-        if(userLoginResponse == null){
-            return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
-        }
-        return JSONResult.ok(userLoginResponse);
+        return iUserService.userLogin(userLoginRequest);
     }
 
 

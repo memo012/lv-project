@@ -46,15 +46,24 @@ public class UserProcessResponse implements Serializable {
      */
     private String lvTeacherWorkTime;
 
+    /**
+     * 审批内容
+     */
     private String taskComment;
 
-    public UserProcessResponse(String teacherName, String checkTime, String lvTeacherLocation, String lvTeacherWorkTime, String taskComment){
+    /**
+     * 审批结果
+     */
+    private String status;
+
+    public UserProcessResponse(String teacherName, String checkTime, String lvTeacherLocation, String lvTeacherWorkTime, String taskComment, String status){
         this.id = new TimeUtil().getLongTime();
         this.teacherName = teacherName;
         this.checkTime = checkTime;
         this.lvTeacherLocation = lvTeacherLocation;
         this.lvTeacherWorkTime = lvTeacherWorkTime;
         this.taskComment = taskComment;
+        this.status = status;
     }
 
 

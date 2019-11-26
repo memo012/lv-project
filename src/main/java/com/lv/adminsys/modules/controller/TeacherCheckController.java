@@ -18,7 +18,7 @@ import java.util.List;
  **/
 @RestController
 @RequestMapping("api/v1/check/")
-public class TeacherCheckController {
+public class TeacherCheckController extends BaseController {
 
     @Autowired
     private ITeacherCheckService iTeacherCheckService;

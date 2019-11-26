@@ -2,8 +2,11 @@ package com.lv.adminsys.modules;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lv.adminsys.common.utils.TimeUtil;
+import com.lv.adminsys.modules.dao.LvLeaveDao;
 import com.lv.adminsys.modules.dao.LvTeacherDao;
+import com.lv.adminsys.modules.dao.LvUserDao;
 import com.lv.adminsys.modules.dao.TestDao;
+import com.lv.adminsys.modules.entity.LvLeaveEntity;
 import com.lv.adminsys.modules.entity.LvTeacherEntity;
 import com.lv.adminsys.modules.entity.LvUserEntity;
 import org.activiti.engine.HistoryService;
@@ -20,6 +23,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.function.Consumer;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -38,6 +42,13 @@ public class ModulesApplicationTests {
 
     @Resource
     private TaskService taskService;
+
+    @Resource
+    private LvUserDao lvUserDao;
+
+    @Autowired
+    private LvLeaveDao lvLeaveDao;
+
 
     /**
      * 测试注解使用
@@ -76,5 +87,27 @@ public class ModulesApplicationTests {
         List<LvTeacherEntity> lv_teacher_role = lvTeacherDao.selectList(new QueryWrapper<LvTeacherEntity>().eq("lv_teacher_role", 1));
         lv_teacher_role.forEach(System.out::println);
     }
+
+    /**
+     * 测试注解使用
+     */
+    @Test
+    public void testMessage() {
+        LvUserEntity useMsgByUserNum = lvUserDao.findUseMsgByUserNum("1713011332");
+        System.out.println(useMsgByUserNum.toString());
+    }
+
+
+    @Test
+    public void test123(){
+        String uerNum = "1713011332";
+        List<LvLeaveEntity> lvLeaveEntities = lvLeaveDao.selectList(
+                new QueryWrapper<LvLeaveEntity>()
+                        .eq("lv_status", "pass")
+                        .eq("lv_user_num", uerNum)
+        );
+
+    }
+
 
 }

@@ -51,10 +51,14 @@ public class JudgeLeaveLeader {
             }
             for (Comment c:
                     taskComments) {
+                String status = "pass";
+                if (c.getFullMessage().contains("拒绝")) {
+                    status = "reject";
+                }
                 lists.add(new UserProcessResponse(
                         teacherEntity.getLvTeacherName(), new TimeUtil().getParseDateForSix(his.getEndTime()),
                         teacherEntity.getLvTeacherLocation(), teacherEntity.getLvTeacherWorkTime(),
-                        c.getFullMessage()
+                        c.getFullMessage(), status
                 ));
             }
         }

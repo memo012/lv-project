@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lv.adminsys.modules.dao.LvUserDao">
+
+    <resultMap id="userMap" type="LvUserEntity">
+        <id property="lvUserId" column="lv_user_id" />
+        <result property="lvUserNum" column="lv_user_num"/>
+        <result property="lvUserPassword" column="lv_user_password"/>
+        <result property="lvUserName" column="lv_user_name"/>
+        <result property="lvUserPhone" column="lv_user_phone"/>
+        <result property="lvTeacherNum" column="lv_teacher_num"/>
+        <result property="lvUserCreateTime" column="lv_user_create_time"/>
+        <result property="lvRole" column="lv_role"/>
+        <collection property="roles" ofType="LvRolesEntity">
+            <id property="rid" column="rid"/>
+            <result property="lvRname" column="lv_rname"/>
+            <collection property="permissionSet" ofType="LvPermissionEntity">
+                <id property="pid" column="pid"/>
+                <result property="lvPname" column="lv_pname"/>
+                <result property="lvUrl" column="lv_url"/>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="findUseMsgByUserNum" parameterType="String" resultMap="userMap" >
+        select u.*,r.*,p.*
+        from lv_user u
+        INNER JOIN lv_roles r on u.lv_role = r.rid
+        INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid
+        INNER JOIN lv_permission p on p.pid = pr.lv_pid
+        where u.lv_user_num = #{arg0}
+    </select>
+
+</mapper>
