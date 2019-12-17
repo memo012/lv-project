@@ -22,8 +22,6 @@ public class UserLoginRequest implements Serializable {
 
     private static final long serialVersionUID = 1465607591192421329L;
 
-    private String id;
-
     /**
      * 用户名
      */
@@ -34,11 +32,6 @@ public class UserLoginRequest implements Serializable {
      */
     private String lvUserPassword;
 
-    public UserLoginRequest(String lvUserNum, String lvUserPassword){
-        this.id = new TimeUtil().getLongTime();
-        this.lvUserNum = lvUserNum;
-        this.lvUserPassword = lvUserPassword;
-    }
 
     public boolean createValidate(){
         return StringUtils.isNotEmpty(lvUserNum) && StringUtils.isNotEmpty(lvUserPassword);

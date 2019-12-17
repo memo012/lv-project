@@ -23,9 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -40,6 +38,7 @@ import java.util.List;
 @Transactional
 public class UserLeaveServiceImpl implements IUserLeaveService {
 
+
     @Autowired
     private LvLeaveDao lvLeaveDao;
 
@@ -49,10 +48,10 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
     @Autowired
     private LeaveService leaveService;
 
-    @Resource
+    @Autowired
     private LvTeacherDao lvTeacherDao;
 
-    @Resource
+    @Autowired
     private JudgeLeaveLeader judgeLeaveLeader;
 
 
@@ -83,7 +82,7 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
             throw new RuntimeException(LvException.ErrorMsg.DATE_ERROR);
         }
         lvLeaveDao.insert(lvLeaveEntity);
-        ProcessInstance processInstance = null;
+        ProcessInstance processInstance;
         // 启动流程时 要和业务进行关联
         if (!lvLeaveEntity.getLvLength().equals("一天以内")) {
             processInstance = leaveService.startProcess(id);
@@ -130,10 +129,9 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
                         )
                 );
             } catch (ParseException e) {
-                e.printStackTrace();
+                return JSONResult.build(500, LvException.ErrorMsg.DATE_ERROR, null);
             }
         }
-
         return JSONResult.ok(responses);
     }
 
@@ -150,10 +148,11 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
             return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
         }
         try {
+            List<String> strings = judgeLeaveLeader.queryLeaderCompleteMess(applyDetail.getLvProcessInstanceId());
             return JSONResult.ok(new ApplyDetailResponse(
                     applyDetail.getLvReason(), new TimeUtil().StringFourTime(applyDetail.getLvBeginTime()),
                     new TimeUtil().StringFourTime(applyDetail.getLvEndTime()), applyDetail.getLvRelativePhone(),
-                    applyDetail.getLvLength()
+                    applyDetail.getLvLength(), strings
             ));
         } catch (ParseException e) {
             return JSONResult.build(500, LvException.ErrorMsg.DATE_ERROR, null);
@@ -222,7 +221,7 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
             return JSONResult.ok(historyList);
         }
 
-        List<UserProcessResponse> lists = new LinkedList<>();
+        List<UserProcessResponse> lists;
 
         // 3. 判断学生是否处于审核中
         if (!leaveEntity.getLvStatus().equals("ing")) {
@@ -247,8 +246,8 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
             return JSONResult.ok(lists);
         }
 
-        int status = 0; // 0 - 教学期间    1 - 非教学期间
-
+        // 0 - 教学期间    1 - 非教学期间
+        int status = 0;
         if (new TimeUtil().dateToWeek(leaveEntity.getLvBeginTime()).contains("六") ||
                 new TimeUtil().dateToWeek(leaveEntity.getLvBeginTime()).contains("日")) {
             lists.add(aduitLeaderMessage(status + 1));
@@ -263,7 +262,7 @@ public class UserLeaveServiceImpl implements IUserLeaveService {
         String leaderName = "";
         String leaderWorkTime = "";
         String leaderLocation = "";
-        List<LvTeacherEntity> lv_teacher_role = new ArrayList<>();
+        List<LvTeacherEntity> lv_teacher_role;
         if (status == 0) {
             lv_teacher_role = lvTeacherDao.selectList(new QueryWrapper<LvTeacherEntity>().eq("lv_role", 4));
         } else {

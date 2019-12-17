@@ -28,6 +28,7 @@ public interface IUserLeaveService {
     /**
      *  查看学生申请列表
      * @param lvUserNum 学生学号
+     * @param status 学生学号
      * @return
      */
     JSONResult queryUserApplyList(String lvUserNum, String status);

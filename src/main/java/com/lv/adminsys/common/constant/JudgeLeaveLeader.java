@@ -13,6 +13,7 @@ import org.activiti.engine.task.Comment;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -63,6 +64,25 @@ public class JudgeLeaveLeader {
             }
         }
         return lists;
+    }
+
+
+    public List<String> queryLeaderCompleteMess(String processInstanceId){
+        List<String> lists = new ArrayList<>();
+        List<HistoricTaskInstance> list = historyService.createHistoricTaskInstanceQuery()
+                .processInstanceId(processInstanceId)
+                .orderByHistoricTaskInstanceStartTime().asc()
+                .list();
+        for (HistoricTaskInstance his:
+                list) {
+            List<Comment> taskComments = taskService.getTaskComments(his.getId());
+            for (Comment c:
+                    taskComments) {
+                lists.add(c.getFullMessage());
+            }
+        }
+        return lists;
+
     }
 
 }

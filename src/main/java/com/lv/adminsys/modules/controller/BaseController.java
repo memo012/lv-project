@@ -51,7 +51,7 @@ public class BaseController {
     }
 
     @GetMapping("/require_role")
-    @RequiresRoles("admin")
+    @RequiresRoles("teacher")
     public JSONResult requireRole(HttpServletRequest request) {
         if(request.getHeader("Token") == null){
             return JSONResult.errorNoLoginMsg(LvException.ErrorMsg.USER_NO_LOGIN);

@@ -7,13 +7,16 @@ import com.lv.adminsys.common.utils.JSONResult;
 import com.lv.adminsys.common.utils.JWTUtil;
 import com.lv.adminsys.common.utils.RedisOperator;
 import com.lv.adminsys.common.utils.TimeUtil;
+import com.lv.adminsys.modules.dao.LvTeacherDao;
 import com.lv.adminsys.modules.dao.LvUserDao;
+import com.lv.adminsys.modules.entity.LvTeacherEntity;
 import com.lv.adminsys.modules.entity.LvUserEntity;
 import com.lv.adminsys.modules.service.IUserService;
 import com.lv.adminsys.modules.shiro.ShiroEncrypt;
 import com.lv.adminsys.modules.vo.login.UserLoginRequest;
 import com.lv.adminsys.modules.vo.login.UserLoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,9 +33,17 @@ import javax.servlet.http.HttpServletRequest;
 @Service
 @Transactional
 public class UserServiceImpl implements IUserService {
+    /**
+     *  老师工号前缀
+     */
+    @Value("${teacher.start}")
+    private String teacherNumStart;
 
     @Resource
     private LvUserDao lvUserDao;
+
+    @Resource
+    private LvTeacherDao lvTeacherDao;
 
     @Autowired
     private RedisOperator redisOperator;
@@ -80,20 +91,37 @@ public class UserServiceImpl implements IUserService {
             return JSONResult.build(402, LvException.ErrorMsg.REQUEST_PARAM_ERROR, null);
         }
         String password = ShiroEncrypt.encrypt(loginRequest.getLvUserNum(), loginRequest.getLvUserPassword());
-        LvUserEntity userEntity = lvUserDao.selectOne(
-                new QueryWrapper<LvUserEntity>()
-                        .eq("lv_user_num", loginRequest.getLvUserNum())
-                        .eq("lv_user_password", password)
-        );
-        if(userEntity == null){
-            return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
+        if(loginRequest.getLvUserNum().startsWith(teacherNumStart)){
+            LvTeacherEntity userEntity = lvTeacherDao.findUseMsgByTeacherNum(loginRequest.getLvUserNum());
+            if(userEntity == null){
+                return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
+            }
+            if(!password.equals(userEntity.getLvTeacherPassword())){
+                return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
+            }
+            return JSONResult.ok(
+                    new UserLoginResponse(
+                            userEntity.getLvTeacherNum(), userEntity.getLvTeacherName(),
+                            userEntity.getLvTeacherPhone(), JWTUtil.sign(userEntity.getLvTeacherNum(), userEntity.getLvTeacherPassword()),
+                            userEntity.getLvRole()
+                    )
+            );
+        }else{
+            LvUserEntity userEntity = lvUserDao.findUseMsgByUserNum(loginRequest.getLvUserNum());
+            if(userEntity == null){
+                return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
+            }
+            if(!password.equals(userEntity.getLvUserPassword())){
+                return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
+            }
+            return JSONResult.ok(
+                    new UserLoginResponse(
+                            userEntity.getLvUserNum(), userEntity.getLvUserName(),
+                            userEntity.getLvUserPhone(), JWTUtil.sign(userEntity.getLvUserNum(), userEntity.getLvUserPassword()),
+                            userEntity.getLvRole()
+                    )
+            );
         }
-        return JSONResult.ok(
-                new UserLoginResponse(
-                        userEntity.getLvUserNum(), userEntity.getLvUserName(),
-                        userEntity.getLvUserPhone(), JWTUtil.sign(userEntity.getLvUserNum(), userEntity.getLvUserPassword())
-                )
-        );
     }
 
     @Override

@@ -1,7 +1,8 @@
 package com.lv.adminsys.common.utils;
 
 /**
- * @Description: 自定义响应数据结构
+ * @author Qiang
+ * @description 自定义响应数据结构
  * 				这个类是提供给门户，ios，安卓，微信商城用的
  * 				门户接受此类数据后需要使用本类的方法转换成对于的数据类型格式(类或者list)
  * 				其他自行处理
@@ -21,16 +22,25 @@ package com.lv.adminsys.common.utils;
  */
 public class JSONResult {
 
-    // 响应业务状态
+    /**
+     *  响应业务状态
+     */
     private Integer status;
 
-    // 响应消息
+    /**
+     *  响应消息
+     */
     private String msg;
 
-    // 响应中的数据
+    /**
+     *  响应中的数据
+     */
     private Object data;
 
-    private String ok;	// 不使用
+    /**
+     *
+     */
+    private String ok;
 
     public static JSONResult build(Integer status, String msg, Object data) {
         return new JSONResult(status, msg, data);

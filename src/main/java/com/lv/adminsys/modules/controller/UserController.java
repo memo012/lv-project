@@ -23,17 +23,6 @@ public class UserController extends BaseController {
     private IUserService iUserService;
 
     /**
-     * 登录
-     * @param userLoginRequest
-     * @return
-     */
-    @PostMapping("login/userLogin")
-    public JSONResult userLogin(@RequestBody UserLoginRequest userLoginRequest){
-        return iUserService.userLogin(userLoginRequest);
-    }
-
-
-    /**
      *  注册
      * @param lvUserEntity
      * @return

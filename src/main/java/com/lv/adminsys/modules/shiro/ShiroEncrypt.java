@@ -25,7 +25,7 @@ public class ShiroEncrypt {
     }
 
     public static void main(String[] args) {
-        System.out.println(encrypt("1713011332", "12345"));
+        System.out.println(encrypt("T171305", "123456"));
     }
 
 }

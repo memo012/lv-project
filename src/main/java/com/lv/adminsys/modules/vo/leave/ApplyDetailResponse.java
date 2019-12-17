@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @Author: qiang
@@ -48,13 +49,19 @@ public class ApplyDetailResponse implements Serializable {
      */
     private String lvLength;
 
-    public ApplyDetailResponse(String lvReason, String lvBeginTime, String lvEndTime, String lvRelativePhone, String lvLength){
+    /**
+     *  审批意见
+     */
+    private List<String> list;
+
+    public ApplyDetailResponse(String lvReason, String lvBeginTime, String lvEndTime, String lvRelativePhone, String lvLength, List<String> list){
         this.id = new TimeUtil().getLongTime();
         this.lvBeginTime = lvBeginTime;
         this.lvEndTime = lvEndTime;
         this.lvReason = lvReason;
         this.lvRelativePhone = lvRelativePhone;
         this.lvLength = lvLength;
+        this.list = list;
     }
 
 }

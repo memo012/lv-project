@@ -4,7 +4,7 @@
 spring:
   profiles:
     # 环境 dev|test|prod
-    active: dev
+    active: test
   activiti:
     check-process-definitions: true #自动检查、部署流程定义文件
     database-schema-update: true #自动更新数据库结构
@@ -24,3 +24,9 @@ mybatis-plus:
     db-config:
       table-underline: true
       db-type: mysql
+
+#############################
+###### 老师工号前缀配置
+#############################
+teacher:
+  start: T

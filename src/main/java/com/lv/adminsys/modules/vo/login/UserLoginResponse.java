@@ -43,15 +43,21 @@ public class UserLoginResponse implements Serializable {
     /**
      * 令牌
      */
-    public String token;
+    private String token;
+
+    /**
+     *  用户角色
+     */
+    private Integer roleNum;
 
 
-    public UserLoginResponse(String lvUserNum, String lvUserName, String lvUserPhone, String token){
+    public UserLoginResponse(String lvUserNum, String lvUserName, String lvUserPhone, String token, Integer roleNum){
         this.id = new TimeUtil().getLongTime();
         this.lvUserNum = lvUserNum;
         this.lvUserName = lvUserName;
         this.lvUserPhone = lvUserPhone;
         this.token = token;
+        this.roleNum = roleNum;
     }
 
 }

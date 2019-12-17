@@ -2,7 +2,9 @@ package com.lv.adminsys.modules.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -16,6 +18,8 @@ import java.io.Serializable;
  */
 @Data
 @TableName(value = "lv_check")
+@AllArgsConstructor
+@NoArgsConstructor
 public class LvCheckEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -32,24 +36,8 @@ public class LvCheckEntity implements Serializable {
     private String lvTeacherNum;
 
     /**
-     * 是否审核通过(1 -成功 0 -失败)
-     */
-    private Integer lvCheckPass;
-
-    /**
-     * 审批批注
-     */
-    private String lvCheckReason;
-
-    /**
      * 请假ID
      */
     private String lvId;
-
-    /**
-     * 审核时间
-     */
-    private String lvCheckCreateTime;
-
 
 }

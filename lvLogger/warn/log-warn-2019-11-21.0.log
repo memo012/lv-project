@@ -1,5 +1,0 @@
-2019-11-21 19:32:12.937 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys]' package. Please check your configuration.
-2019-11-21 19:32:17.996 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.lv.adminsys.modules.entity.LvRolesEntity.
-2019-11-21 19:34:05.469 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys]' package. Please check your configuration.
-2019-11-21 19:46:02.365 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys]' package. Please check your configuration.
-2019-11-21 19:54:56.710 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lv.adminsys]' package. Please check your configuration.

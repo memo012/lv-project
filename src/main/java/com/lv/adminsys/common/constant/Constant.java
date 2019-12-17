@@ -10,10 +10,12 @@ package com.lv.adminsys.common.constant;
 public class Constant {
 
     /**
-     * reids 常量
+     * redis 常量
      */
     public static class Redis{
         public static final String USER_MESSAGE="redis:user";
+        public static final String TEACHER_MESSAGE="redis:teacher";
+        public static final String HISTORY_COMPLETE="redis:history";
     }
 
 }

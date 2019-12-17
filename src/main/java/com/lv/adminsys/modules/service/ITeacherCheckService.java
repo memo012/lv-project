@@ -1,6 +1,8 @@
 package com.lv.adminsys.modules.service;
 
+import com.lv.adminsys.common.utils.JSONResult;
 import com.lv.adminsys.modules.entity.LvLeaveEntity;
+import com.lv.adminsys.modules.vo.leave.CompleteTaskRequest;
 
 import java.util.List;
 
@@ -18,15 +20,13 @@ public interface ITeacherCheckService {
      * @param userId 审批人ID
      * @return
      */
-    List<LvLeaveEntity> queryTaskByUserId(String userId);
+    JSONResult queryTaskByUserId(String userId);
 
     /**
      *  完成审批
-     * @param userId 用户ID
-     * @param taskId    任务ID
-     * @param aduit 审批结果
-     * @param aduit 审批原因
+     *  @param taskRequest 审核请求类
+     *  @return
      */
-    void completeTask(String taskId, String userId, String aduit, String comment);
+    JSONResult completeTask(CompleteTaskRequest taskRequest);
 
 }

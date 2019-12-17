@@ -1,9 +1,0 @@
-2019-11-21 19:35:04.428 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_begin_time,lv_day,lv_relative_type FROM lv_leave WHERE (lv_status = ? AND lv_user_num = ?) 
-2019-11-21 19:35:04.466 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==> Parameters: pass(String), 1713011332(String)
-2019-11-21 19:35:04.486 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - <==      Total: 2
-2019-11-21 19:49:43.125 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_begin_time,lv_day,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
-2019-11-21 19:49:43.144 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1574056829(String)
-2019-11-21 19:49:43.171 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
-2019-11-21 19:55:08.970 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_begin_time,lv_day,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
-2019-11-21 19:55:08.991 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1574056829(String)
-2019-11-21 19:55:09.115 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1

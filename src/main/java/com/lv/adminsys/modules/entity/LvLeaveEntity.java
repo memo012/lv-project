@@ -99,11 +99,6 @@ public class LvLeaveEntity implements Serializable {
      */
     private String lvProcessInstanceId;
 
-    /**
-     * 任务ID
-     */
-    @TableField(exist = false)
-    private String taskId;
 
     public boolean createValidate(){
         return StringUtils.isNotEmpty(lvUserNum) && StringUtils.isNotEmpty(lvRelativeType)

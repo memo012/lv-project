@@ -3,10 +3,12 @@ package com.lv.adminsys.modules.controller;
 import com.lv.adminsys.common.utils.JSONResult;
 import com.lv.adminsys.modules.entity.LvLeaveEntity;
 import com.lv.adminsys.modules.service.ITeacherCheckService;
+import com.lv.adminsys.modules.service.ITeacherService;
+import com.lv.adminsys.modules.vo.leave.CompleteTaskRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -20,8 +22,11 @@ import java.util.List;
 @RequestMapping("api/v1/check/")
 public class TeacherCheckController extends BaseController {
 
-    @Autowired
+    @Resource
     private ITeacherCheckService iTeacherCheckService;
+
+    @Resource
+    private ITeacherService iTeacherService;
 
 
     /**
@@ -29,25 +34,40 @@ public class TeacherCheckController extends BaseController {
      * @param userId 审批人ID
      * @return
      */
-    @RequestMapping("/queryByTeacherId")
-    public JSONResult queryByTeacherId(String userId){
-        List<LvLeaveEntity> lvLeaveEntities = iTeacherCheckService.queryTaskByUserId(userId);
-        return JSONResult.ok(lvLeaveEntities);
+    @GetMapping("/queryByTeacherId")
+    public JSONResult queryByTeacherId(@RequestParam("teacherId") String userId){
+        return iTeacherCheckService.queryTaskByUserId(userId);
     }
 
 
     /**
      *  审核任务
-     * @param taskId 任务ID
-     * @param userId 用户ID
-     * @param aduit 审批结果
-     * @param comment 审批原因
      * @return
      */
-    @RequestMapping("/completeTask")
-    public JSONResult completeTask(String taskId, String userId, String aduit, String comment) {
-        iTeacherCheckService.completeTask(taskId, userId, aduit, comment);
-        return JSONResult.ok("操作成功");
+    @PostMapping("/completeTask")
+    public JSONResult completeTask(@RequestBody CompleteTaskRequest taskRequest) {
+        return iTeacherCheckService.completeTask(taskRequest);
     }
+
+    /**
+     *  被审核人请假详情
+     * @return
+     */
+    @GetMapping("/applyDetail")
+    public JSONResult handle(@RequestParam("lvId") String lvId){
+        return iTeacherService.findApplyDetail(lvId);
+    }
+
+    /**
+     *  审核人的历史审核列表
+     * @param teacherNum 学生工号
+     * @return
+     */
+    @GetMapping("/historyMess")
+    public JSONResult historyMess(@RequestParam("teacherNum") String teacherNum){
+        return iTeacherService.findCompleteApplyItem(teacherNum);
+    }
+
+    
 
 }

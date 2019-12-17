@@ -1,10 +1,12 @@
 package com.lv.adminsys.modules.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * <p>
@@ -65,5 +67,11 @@ public class LvTeacherEntity implements Serializable {
      * 老师(领导)角色
      */
     private Integer lvRole;
+
+    /**
+     *  角色
+     */
+    @TableField(exist = false)
+    private Set<LvRolesEntity> roles;
 
 }
