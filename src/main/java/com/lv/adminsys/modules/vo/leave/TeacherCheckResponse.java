@@ -1,6 +1,5 @@
 package com.lv.adminsys.modules.vo.leave;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.lv.adminsys.common.utils.TimeUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;

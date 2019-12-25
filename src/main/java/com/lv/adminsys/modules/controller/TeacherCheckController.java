@@ -68,6 +68,4 @@ public class TeacherCheckController extends BaseController {
         return iTeacherService.findCompleteApplyItem(teacherNum);
     }
 
-    
-
 }

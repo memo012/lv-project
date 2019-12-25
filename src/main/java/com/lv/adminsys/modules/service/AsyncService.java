@@ -1,5 +1,9 @@
 package com.lv.adminsys.modules.service;
 
+import org.activiti.engine.task.Task;
+
+import java.util.List;
+
 /**
  * @Author: qiang
  * @ProjectName: adminsystem
@@ -15,5 +19,13 @@ public interface AsyncService {
      * @param lvId 请假id
      */
     public void addCheckMess(String teacherNum, String lvId);
+
+    /**
+     *  添加标记信息
+     * @param account
+     * @param taskList
+     */
+    public void addCheckMessage(String account, List<Task> taskList);
+
 
 }

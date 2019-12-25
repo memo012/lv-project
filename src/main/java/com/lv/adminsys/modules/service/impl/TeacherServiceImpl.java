@@ -94,8 +94,8 @@ public class TeacherServiceImpl implements ITeacherService {
         if (StringUtils.isEmpty(teacherNum)) {
             return JSONResult.build(402, LvException.ErrorMsg.REQUEST_PARAM_ERROR, null);
         }
-        List<LvUserEntity> lvUserEntities =
-                lvUserDao.selectList(new QueryWrapper<LvUserEntity>().eq("lv_teacher_num", teacherNum));
+        List<LvTeacherEntity> lvUserEntities =
+                lvTeacherDao.selectList(new QueryWrapper<LvTeacherEntity>().eq("lv_teacher_num", teacherNum));
         if (CollectionUtils.isEmpty(lvUserEntities)) {
             return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
         }
@@ -146,6 +146,9 @@ public class TeacherServiceImpl implements ITeacherService {
             } catch (ParseException e) {
                 return JSONResult.build(500, LvException.ErrorMsg.DATE_ERROR, null);
             }
+        }
+        if (CollectionUtils.isEmpty(list)) {
+            return JSONResult.build(401, LvException.ErrorMsg.CAN_ONT_FIND_RECORD, null);
         }
         return JSONResult.ok(list);
     }

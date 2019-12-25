@@ -1,9 +1,22 @@
 package com.lv.adminsys.modules;
 
+import com.lv.adminsys.common.utils.JSONResult;
+import com.lv.adminsys.common.utils.TimeUtil;
+import com.lv.adminsys.modules.service.ITeacherCheckService;
+import com.lv.adminsys.modules.service.impl.TeacherCheckServiceImpl;
+import org.activiti.engine.HistoryService;
+import org.activiti.engine.TaskService;
+import org.activiti.engine.history.HistoricTaskInstance;
+import org.activiti.engine.task.Comment;
+import org.activiti.engine.task.Task;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -11,57 +24,44 @@ public class ModulesApplicationTests {
 
 //    private Logger logger = LoggerFactory.getLogger(this.getClass());
 //
-//    @Autowired
-//    private TestDao testDao;
-//
-//    @Resource
-//    private HistoryService historyService;
-//
-//    @Autowired
-//    private LvTeacherDao lvTeacherDao;
-//
-//    @Resource
-//    private TaskService taskService;
-//
-//    @Resource
-//    private LvUserDao lvUserDao;
-//
-//    @Autowired
-//    private LvLeaveDao lvLeaveDao;
-//
-//    @Autowired
-//    JudgeLeaveLeader judgeLeaveLeader;
+
+    @Resource
+    private HistoryService historyService;
+
+    @Resource
+    private TaskService taskService;
+
 //
 //
 //
 //    /**
 //     * 测试注解使用
 //     */
-//    @Test
-//    public void testAnnotation() {
-//        String processInstanceId = "130001";
-//        List<HistoricTaskInstance> list = historyService.createHistoricTaskInstanceQuery()
-//                .processInstanceId(processInstanceId)
-//                .orderByHistoricTaskInstanceStartTime().asc()
-//                .list();
-//        System.out.println("                   "+list.size());
-//        for (HistoricTaskInstance his:
-//                list) {
-//            List<Comment> taskComments = taskService.getTaskComments(his.getId());
-//            System.out.println(taskComments.size());
-//            for (Comment c:
-//                 taskComments) {
-//                System.out.println("assignee:" + his.getAssignee());
-//                System.out.println("startTime:" + his.getStartTime());
-//                System.out.println("endTime:" + his.getEndTime());
-//                System.out.println("name:" + his.getName());
-//                System.out.println("duration:" + his.getDurationInMillis());
-//                System.out.println(new TimeUtil().getParseDateForSix(his.getEndTime()));
-//                System.out.println("审批意见："+c.getFullMessage());
-//            }
-//            System.out.println("------------------------------------------------------");
-//        }
-//    }
+    @Test
+    public void testAnnotation() {
+        String processInstanceId = "130009";
+        List<HistoricTaskInstance> list = historyService.createHistoricTaskInstanceQuery()
+                .processInstanceId(processInstanceId)
+                .orderByHistoricTaskInstanceStartTime().asc()
+                .list();
+        System.out.println("                   "+list.size());
+        for (HistoricTaskInstance his:
+                list) {
+            List<Comment> taskComments = taskService.getTaskComments(his.getId());
+            System.out.println(taskComments.size());
+            for (Comment c:
+                 taskComments) {
+                System.out.println("assignee:" + his.getAssignee());
+                System.out.println("startTime:" + his.getStartTime());
+                System.out.println("endTime:" + his.getEndTime());
+                System.out.println("name:" + his.getName());
+                System.out.println("duration:" + his.getDurationInMillis());
+                System.out.println(new TimeUtil().getParseDateForSix(his.getEndTime()));
+                System.out.println("审批意见："+c.getFullMessage());
+            }
+            System.out.println("------------------------------------------------------");
+        }
+    }
 //
 //    @Test
 //    public void test(){
@@ -96,6 +96,7 @@ public class ModulesApplicationTests {
 //        strings.forEach(System.out::println);
 //    }
 //
+
     @Test
     public void test4(){
 

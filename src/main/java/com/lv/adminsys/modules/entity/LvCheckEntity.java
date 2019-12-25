@@ -22,8 +22,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class LvCheckEntity implements Serializable {
 
-    private static final long serialVersionUID = 1L;
 
+    private static final long serialVersionUID = -4855415839596981080L;
     /**
      * 唯一标识符
      */
@@ -39,5 +39,10 @@ public class LvCheckEntity implements Serializable {
      * 请假ID
      */
     private String lvId;
+
+    /**
+     *  标记是否已读 0 -- 未读  1 -- 已读
+     */
+    private int lvBook;
 
 }

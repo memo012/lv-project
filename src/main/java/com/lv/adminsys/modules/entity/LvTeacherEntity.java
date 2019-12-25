@@ -69,6 +69,11 @@ public class LvTeacherEntity implements Serializable {
     private Integer lvRole;
 
     /**
+     *  所属学院
+     */
+    private Integer lvCollage;
+
+    /**
      *  角色
      */
     @TableField(exist = false)

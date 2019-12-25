@@ -103,7 +103,7 @@ public class UserServiceImpl implements IUserService {
                     new UserLoginResponse(
                             userEntity.getLvTeacherNum(), userEntity.getLvTeacherName(),
                             userEntity.getLvTeacherPhone(), JWTUtil.sign(userEntity.getLvTeacherNum(), userEntity.getLvTeacherPassword()),
-                            userEntity.getLvRole()
+                            userEntity.getLvRole(), userEntity.getLvCollage()
                     )
             );
         }else{
@@ -118,7 +118,7 @@ public class UserServiceImpl implements IUserService {
                     new UserLoginResponse(
                             userEntity.getLvUserNum(), userEntity.getLvUserName(),
                             userEntity.getLvUserPhone(), JWTUtil.sign(userEntity.getLvUserNum(), userEntity.getLvUserPassword()),
-                            userEntity.getLvRole()
+                            userEntity.getLvRole(), userEntity.getLvCollage()
                     )
             );
         }

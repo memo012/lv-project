@@ -1,10 +1,8 @@
 package com.lv.adminsys.modules.service;
 
 import com.lv.adminsys.common.utils.JSONResult;
-import com.lv.adminsys.modules.entity.LvLeaveEntity;
 import com.lv.adminsys.modules.vo.leave.CompleteTaskRequest;
-
-import java.util.List;
+import com.lv.adminsys.modules.vo.web.WebTeacherCheckDTO;
 
 /**
  * @Author: qiang
@@ -28,5 +26,6 @@ public interface ITeacherCheckService {
      *  @return
      */
     JSONResult completeTask(CompleteTaskRequest taskRequest);
+
 
 }

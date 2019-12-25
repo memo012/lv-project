@@ -4,8 +4,11 @@ import com.lv.adminsys.common.utils.TimeUtil;
 import com.lv.adminsys.modules.dao.LvCheckDao;
 import com.lv.adminsys.modules.entity.LvCheckEntity;
 import com.lv.adminsys.modules.service.AsyncService;
+import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @Author: qiang
@@ -23,7 +26,15 @@ public class AsyncServiceImpl implements AsyncService {
     @Override
     public void addCheckMess(String teacherNum, String lvId) {
         lvCheckDao.insert(new LvCheckEntity(
-                new TimeUtil().getLongTime(), teacherNum, lvId
+                new TimeUtil().getLongTime(), teacherNum, lvId, 0
         ));
     }
+
+    @Override
+    public void addCheckMessage(String account, List<Task> taskList) {
+
+
+    }
+
+
 }

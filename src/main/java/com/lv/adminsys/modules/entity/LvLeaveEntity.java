@@ -95,6 +95,11 @@ public class LvLeaveEntity implements Serializable {
     private String lvLength;
 
     /**
+     *  是否已读 0 -- 未读   1 -- 已读
+     */
+    private int lvBook = 0;
+
+    /**
      * 请假流程实例id
      */
     private String lvProcessInstanceId;

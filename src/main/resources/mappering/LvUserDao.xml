@@ -13,6 +13,7 @@
         <result property="lvTeacherNum" column="lv_teacher_num"/>
         <result property="lvUserCreateTime" column="lv_user_create_time"/>
         <result property="lvRole" column="lv_role"/>
+        <result property="lvCollage" column="lv_collage"/>
         <collection property="roles" ofType="LvRolesEntity">
             <id property="rid" column="rid"/>
             <result property="lvRname" column="lv_rname"/>

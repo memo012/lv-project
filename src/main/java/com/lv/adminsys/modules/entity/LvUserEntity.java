@@ -63,6 +63,12 @@ public class LvUserEntity implements Serializable {
      */
     private Integer lvRole;
 
+
+    /**
+     *  所属学院
+     */
+    private Integer lvCollage;
+
     /**
      *  角色
      */
