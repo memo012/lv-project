@@ -479,3 +479,151 @@ accountType： 账号类型
 - 200: 请求成功
 - 502： 登录过期 ，重新登录
 - 504： 权限不足
+
+## web端查看个人信息
+
+1. **接口名:** `api/v1/user/findUserMessage`
+
+2. 请求方式: `GET`
+
+3. 请求接口方法:
+
+   ```Java
+   public JSONResult findUserMessage(@RequestParam("userName") String userName)
+   ```
+
+4. 请求参数:(参数)
+
+```Java
+userName： 账号
+```
+
+5. 返回类型(JOSN格式)  -- 格式如下图所示
+
+```Java
+{
+    "status": 200,
+    "msg": "OK",
+    "data": {
+        "lvEmail": "1158821459@qq.com",
+        "lvQq": null,
+        "lvUserPhone": "15383466846",
+        "lvUserNum": "1713011332"
+    },
+    "ok": null
+}
+```
+
+注意:
+
+- `status`: 有5种形式
+  - 401: 表示查询为空
+  -    402: 表示参数请求错误(顺序,非空等判断)
+  -  200: 请求成功
+  -  502： 登录过期 ，重新登录
+  -  504： 权限不足
+- 各个字段解释
+  - `lvEmail`： 用户邮箱
+  - `lvQq` ： 用户QQ
+  - `lvUserPhone`： 用户手机号
+  - `lvUserNum`： 用户学号
+
+## web端修改个人信息
+
+1. **接口名:** `api/v1/user/updateUserMessage`
+
+2. 请求方式: `GET`
+
+3. 请求接口方法:
+
+   ```Java
+   public JSONResult updateUserMessage(@RequestBody UserMessageVO userMessageVO)
+   ```
+
+4. 请求参数:(参数)
+
+```Java
+{
+       "lvEmail": "1158821459@qq.com",
+        "lvQq": null,
+        "lvUserPhone": "15383466846",
+        "lvUserNum": "1713011332"
+}
+```
+
+请求参数解释：
+
+```Java
+lvUserNum：  必填
+lvEmail： 选填
+lvQq： 选填
+lvUserPhone： 选填
+```
+
+5. 返回类型(JOSN格式)  -- 格式如下图所示
+
+```Java
+{
+    "status": 200,
+    "msg": "OK",
+    "data": null,
+    "ok": null
+}
+```
+
+注意:
+
+- `status`: 有5种形式
+  - 401: 表示查询为空
+  -   402: 表示参数请求错误(顺序,非空等判断)
+  -  200: 请求成功
+  -  502： 登录过期 ，重新登录
+  -  504： 权限不足
+
+## web端修改个人密码
+
+1. **接口名:** `api/v1/user/updatePwd`
+
+2. 请求方式: `GET`
+
+3. 请求接口方法:
+
+   ```Java
+   public JSONResult updatePwd(@RequestParam("userNum") String userNum, @RequestParam("password") String password)
+   ```
+
+4. 请求参数:(参数)
+
+```Java
+{
+    "userNum":  "1223533333",
+    "password":"123456"
+}
+```
+
+请求参数解释：
+
+```Java
+userNum: 用户账号
+password：用户 修改后的新密码
+```
+
+5. 返回类型(JOSN格式)  -- 格式如下图所示
+
+```Java
+{
+    "status": 200,
+    "msg": "OK",
+    "data": null,
+    "ok": null
+}
+```
+
+注意:
+
+- `status`: 有5种形式
+  - 401: 表示查询为空
+  -   402: 表示参数请求错误(顺序,非空等判断)
+  -  200: 请求成功
+  -  502： 登录过期 ，重新登录
+  -  504： 权限不足
