@@ -5,7 +5,7 @@
 <mapper namespace="com.lv.adminsys.modules.dao.LvUserDao">
 
     <resultMap id="userMap" type="LvUserEntity">
-        <id property="lvUserId" column="lv_user_id" />
+        <id property="lvUserId" column="lv_user_id"/>
         <result property="lvUserNum" column="lv_user_num"/>
         <result property="lvUserPassword" column="lv_user_password"/>
         <result property="lvUserName" column="lv_user_name"/>
@@ -14,6 +14,8 @@
         <result property="lvUserCreateTime" column="lv_user_create_time"/>
         <result property="lvRole" column="lv_role"/>
         <result property="lvCollage" column="lv_collage"/>
+        <result property="lvQq" column="lv_qq"/>
+        <result property="lvEmail" column="lv_email"/>
         <collection property="roles" ofType="LvRolesEntity">
             <id property="rid" column="rid"/>
             <result property="lvRname" column="lv_rname"/>
@@ -25,7 +27,7 @@
         </collection>
     </resultMap>
 
-    <select id="findUseMsgByUserNum" parameterType="String" resultMap="userMap" >
+    <select id="findUseMsgByUserNum" parameterType="String" resultMap="userMap">
         select u.*,r.*,p.*
         from lv_user u
         INNER JOIN lv_roles r on u.lv_role = r.rid

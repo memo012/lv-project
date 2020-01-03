@@ -19,6 +19,12 @@ import java.io.Serializable;
 public class WebLeaveListVO implements Serializable {
 
     private static final long serialVersionUID = 8586000044466904287L;
+
+    /**
+     *  消息通知id
+     */
+    private String lvMessageId;
+
     /**
      *  请假状态
      */
@@ -35,7 +41,7 @@ public class WebLeaveListVO implements Serializable {
     private String lvId;
 
     /**
-     *  标记是否已读  0 --  未读   1 --  已读
+     *  标记是否已读  0 --  未读   1 --  已读  -1 -- 删除
      */
     private Integer lvBook;
 

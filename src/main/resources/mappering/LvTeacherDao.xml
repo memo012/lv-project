@@ -15,6 +15,8 @@
         <result property="lvTeacherCreateTime" column="lv_teacher_create_time"/>
         <result property="lvRole" column="lv_role"/>
         <result property="lvCollage" column="lv_collage"/>
+        <result property="lvQq" column="lv_qq" />
+        <result property="lvEmail" column="lv_email" />
         <collection property="roles" ofType="LvRolesEntity">
             <id property="rid" column="rid"/>
             <result property="lvRname" column="lv_rname"/>

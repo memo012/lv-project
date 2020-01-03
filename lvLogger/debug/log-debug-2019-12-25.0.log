@@ -1,0 +1,693 @@
+2019-12-25 15:34:47.790 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:34:47.818 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:34:47.841 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:34:47.843 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:34:47.849 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:34:47.900 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:34:47.976 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:34:47.976 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:34:47.980 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:35:01.395 [http-nio-8080-exec-2] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - ==>  Preparing: SELECT lv_teacher_id,lv_collage,lv_teacher_phone,lv_role,lv_teacher_work_time,lv_teacher_num,lv_teacher_create_time,lv_teacher_location,lv_teacher_password,lv_teacher_name FROM lv_teacher WHERE (lv_teacher_num = ?) 
+2019-12-25 15:35:01.402 [http-nio-8080-exec-2] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:35:01.408 [http-nio-8080-exec-2] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - <==      Total: 1
+2019-12-25 15:35:01.491 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:35:01.495 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:35:01.499 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:35:01.500 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:35:01.506 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:35:01.514 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:35:01.517 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:35:01.518 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:35:01.521 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:35:01.535 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:35:01.537 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:35:01.545 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:35:01.551 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:35:01.555 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:35:01.562 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:35:01.564 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:35:01.566 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:35:01.570 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:35:01.580 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:35:01.581 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:35:01.587 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:35:01.593 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:35:01.597 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:35:01.607 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:35:01.617 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:35:01.618 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:35:01.632 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:35:01.640 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:35:01.643 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:35:01.645 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:36:53.823 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:36:53.823 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:36:53.834 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:36:53.836 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:36:53.837 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:36:53.842 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:38:33.048 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:38:33.052 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:38:33.058 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:38:33.059 [http-nio-8080-exec-9] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:38:33.067 [http-nio-8080-exec-9] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:38:33.075 [http-nio-8080-exec-9] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:38:33.084 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:38:33.085 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:38:33.089 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:38:33.090 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:38:33.091 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:38:33.098 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:38:33.103 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:38:33.106 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:38:33.108 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:38:33.110 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:38:33.114 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:38:33.118 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:38:44.840 [http-nio-8080-exec-10] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:38:44.841 [http-nio-8080-exec-10] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:38:44.843 [http-nio-8080-exec-10] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:38:44.843 [http-nio-8080-exec-10] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:38:44.844 [http-nio-8080-exec-10] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:38:44.852 [http-nio-8080-exec-10] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:38:44.862 [http-nio-8080-exec-10] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:38:44.863 [http-nio-8080-exec-10] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:38:44.872 [http-nio-8080-exec-10] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:39:17.475 [http-nio-8080-exec-2] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - ==>  Preparing: SELECT lv_teacher_id,lv_collage,lv_teacher_phone,lv_role,lv_teacher_work_time,lv_teacher_num,lv_teacher_create_time,lv_teacher_location,lv_teacher_password,lv_teacher_name FROM lv_teacher WHERE (lv_teacher_num = ?) 
+2019-12-25 15:39:17.480 [http-nio-8080-exec-2] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:39:17.482 [http-nio-8080-exec-2] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - <==      Total: 1
+2019-12-25 15:39:17.519 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:39:17.520 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:39:17.522 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:39:17.523 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:39:17.523 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:39:17.528 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:39:17.530 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:39:17.531 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:39:17.532 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:39:17.535 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:39:17.537 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:39:17.545 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:39:17.550 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:39:17.554 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:39:17.559 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:39:17.563 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:39:17.564 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:39:17.568 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:39:17.572 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:39:17.574 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:39:17.577 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:39:17.580 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:39:17.581 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:39:17.586 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:39:17.589 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:39:17.591 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:39:17.594 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:39:17.596 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:39:17.596 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:39:17.604 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:41:57.215 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:41:57.232 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:41:57.248 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:41:57.254 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:41:57.255 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:41:57.270 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:41:57.325 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:41:57.326 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:41:57.331 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:41:57.337 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:41:57.337 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:41:57.340 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:41:57.343 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:41:57.344 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:41:57.349 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:41:57.353 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:41:57.355 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:41:57.357 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:48:15.418 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:48:15.419 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:48:15.423 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:48:15.423 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:48:15.424 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:48:15.439 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:48:15.466 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:48:15.467 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:48:15.480 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:48:15.485 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:48:15.492 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:48:15.499 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:48:15.508 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:48:15.509 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:48:15.526 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:48:15.534 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:48:15.540 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:48:15.550 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:56:36.572 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:56:36.595 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:56:36.613 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:56:36.615 [http-nio-8080-exec-1] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:56:36.617 [http-nio-8080-exec-1] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:56:36.625 [http-nio-8080-exec-1] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:56:36.679 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:56:36.680 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:56:36.685 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:56:36.689 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:56:36.690 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:56:36.692 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:56:36.697 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:56:36.701 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:56:36.705 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:56:36.708 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:56:36.709 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:56:36.715 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:57:09.104 [http-nio-8080-exec-3] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - ==>  Preparing: SELECT lv_teacher_id,lv_collage,lv_teacher_phone,lv_role,lv_teacher_work_time,lv_teacher_num,lv_teacher_create_time,lv_teacher_location,lv_teacher_password,lv_teacher_name FROM lv_teacher WHERE (lv_teacher_num = ?) 
+2019-12-25 15:57:09.105 [http-nio-8080-exec-3] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:57:09.114 [http-nio-8080-exec-3] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - <==      Total: 1
+2019-12-25 15:57:09.187 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:57:09.188 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:57:09.192 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:57:09.197 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:57:09.198 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:09.216 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:57:09.222 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:57:09.222 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:09.224 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:57:09.241 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:57:09.242 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:57:09.254 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:57:09.258 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:57:09.259 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:57:09.274 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:57:09.276 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:57:09.277 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:09.286 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:57:09.290 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:57:09.291 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:09.302 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:57:09.307 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:57:09.307 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:57:09.319 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:57:09.323 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:57:09.325 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:09.339 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:57:09.350 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:57:09.353 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:09.355 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:57:11.662 [http-nio-8080-exec-4] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - ==>  Preparing: SELECT lv_teacher_id,lv_collage,lv_teacher_phone,lv_role,lv_teacher_work_time,lv_teacher_num,lv_teacher_create_time,lv_teacher_location,lv_teacher_password,lv_teacher_name FROM lv_teacher WHERE (lv_teacher_num = ?) 
+2019-12-25 15:57:11.664 [http-nio-8080-exec-4] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:57:11.667 [http-nio-8080-exec-4] DEBUG c.lv.adminsys.modules.dao.LvTeacherDao.selectList - <==      Total: 1
+2019-12-25 15:57:11.736 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:57:11.737 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:57:11.741 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:57:11.743 [http-nio-8080-exec-4] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:57:11.744 [http-nio-8080-exec-4] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:11.750 [http-nio-8080-exec-4] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:57:11.756 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:57:11.757 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:11.759 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:57:11.768 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:57:11.769 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:57:11.775 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:57:11.781 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:57:11.782 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:57:11.788 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:57:11.791 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:57:11.792 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:11.798 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:57:11.802 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:57:11.803 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:11.809 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:57:11.818 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:57:11.818 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:57:11.823 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:57:11.827 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:57:11.831 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:11.846 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:57:11.854 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:57:11.854 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:11.857 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:57:47.877 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:57:47.878 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:57:47.880 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:57:47.880 [http-nio-8080-exec-5] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:57:47.882 [http-nio-8080-exec-5] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:47.885 [http-nio-8080-exec-5] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:57:47.896 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==>  Preparing: SELECT COUNT( 1 ) FROM lv_leave WHERE (lv_user_num = ?) 
+2019-12-25 15:57:47.899 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - ==> Parameters: 1713011332(String)
+2019-12-25 15:57:47.900 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectCount - <==      Total: 1
+2019-12-25 15:59:29.223 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:59:29.242 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:59:29.269 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:59:29.272 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:59:29.273 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:59:29.284 [http-nio-8080-exec-3] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:59:29.367 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:59:29.368 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:59:29.371 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:59:29.376 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:59:29.381 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:59:29.386 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:59:29.389 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:59:29.390 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:59:29.399 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:59:29.402 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:59:29.403 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:59:29.407 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:59:35.811 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 15:59:35.814 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 15:59:35.823 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 15:59:35.824 [http-nio-8080-exec-4] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 15:59:35.825 [http-nio-8080-exec-4] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 15:59:35.836 [http-nio-8080-exec-4] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 15:59:35.845 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 15:59:35.846 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 15:59:35.860 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 15:59:35.862 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:59:35.863 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 15:59:35.878 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 15:59:35.886 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 15:59:35.887 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 15:59:35.894 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 15:59:35.903 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 15:59:35.904 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 15:59:35.911 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:00:47.243 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 16:00:47.277 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 16:00:47.304 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 16:00:47.308 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 16:00:47.309 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 16:00:47.323 [http-nio-8080-exec-2] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 16:00:47.395 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 16:00:47.396 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 16:00:47.403 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 16:00:47.411 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:00:47.412 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:00:47.421 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:00:47.426 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:00:47.427 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:00:47.433 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:00:47.439 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:00:47.441 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:00:47.460 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:01:59.026 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 16:01:59.051 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 16:01:59.088 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 16:01:59.091 [http-nio-8080-exec-1] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 16:01:59.097 [http-nio-8080-exec-1] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 16:01:59.105 [http-nio-8080-exec-1] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 16:01:59.187 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 16:01:59.188 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 16:01:59.201 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 16:01:59.206 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:01:59.207 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:01:59.211 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:01:59.222 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:01:59.222 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:01:59.226 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:01:59.235 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:01:59.238 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:01:59.242 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:11:33.266 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 16:11:33.283 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:11:33.312 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:11:33.321 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:11:33.322 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:11:33.332 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:11:33.341 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:11:33.342 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:11:33.347 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:11:33.358 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:11:33.359 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:11:33.370 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:13:12.742 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 16:13:12.743 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 16:13:12.755 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 16:13:12.757 [http-nio-8080-exec-5] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 16:13:12.758 [http-nio-8080-exec-5] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 16:13:12.771 [http-nio-8080-exec-5] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 16:13:23.601 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 16:13:23.603 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 16:13:23.625 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 16:13:23.626 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 16:13:23.626 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 16:13:23.631 [http-nio-8080-exec-6] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 16:13:45.037 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 16:13:45.042 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:13:45.045 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:13:45.054 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:13:45.055 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:13:45.066 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:13:45.071 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:13:45.072 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:13:45.092 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:13:45.098 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:13:45.102 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:13:45.107 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:18:41.490 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 16:18:41.912 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:18:42.225 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:19:20.488 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:19:20.501 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:19:20.631 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:19:21.536 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:19:21.546 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:19:21.669 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:19:26.758 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:19:26.763 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:19:26.771 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:21:02.575 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC 
+2019-12-25 16:21:02.628 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:21:02.656 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 6
+2019-12-25 16:21:02.678 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:21:02.679 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:21:02.689 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:21:02.696 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:21:02.697 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:21:02.710 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:21:02.731 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:21:02.733 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:21:02.753 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:23:06.947 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 16:23:07.073 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:23:07.159 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:23:07.184 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:23:07.188 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:23:07.215 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:23:07.236 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:23:07.247 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:23:07.263 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:23:07.301 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:23:07.306 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:23:07.339 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:24:06.835 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 16:24:06.838 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:24:06.872 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:24:06.899 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:24:06.912 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:24:06.939 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:24:06.948 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:24:06.963 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:24:07.006 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:24:07.042 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:24:07.043 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:24:07.059 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:25:12.980 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC 
+2019-12-25 16:25:12.982 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:25:13.000 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:25:13.021 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:25:13.022 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:25:13.028 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:25:13.030 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:25:13.030 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:25:13.033 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:25:13.038 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:25:13.039 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:25:13.046 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:26:14.189 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC 
+2019-12-25 16:26:14.297 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:26:14.382 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 6
+2019-12-25 16:26:14.480 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:26:14.484 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:26:14.501 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:26:14.523 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:26:14.530 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:26:14.549 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:26:14.584 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:26:14.588 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:26:14.612 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:29:58.550 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC 
+2019-12-25 16:29:58.660 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:29:58.783 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 6
+2019-12-25 16:29:58.915 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:29:58.920 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:29:58.949 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:29:58.969 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:29:58.972 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:29:58.994 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:29:59.021 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:29:59.026 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:29:59.043 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:32:30.628 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC 
+2019-12-25 16:32:30.651 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:32:30.682 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 6
+2019-12-25 16:32:30.713 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:32:30.714 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:32:30.719 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:32:30.723 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:32:30.725 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:32:30.731 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:32:30.739 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:32:30.740 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:32:30.746 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:33:31.719 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC 
+2019-12-25 16:33:31.742 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:33:31.776 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 6
+2019-12-25 16:33:31.808 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:33:31.809 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:33:31.822 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:33:31.824 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:33:31.825 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:33:31.837 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:33:31.844 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:33:31.845 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:33:31.851 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:35:09.609 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC 
+2019-12-25 16:35:09.711 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:35:09.804 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 6
+2019-12-25 16:35:09.888 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:35:09.902 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:35:09.912 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:35:09.945 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:35:09.946 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:35:09.960 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:35:09.993 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:35:09.993 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:35:10.031 [http-nio-8080-exec-1] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:36:49.190 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check 
+2019-12-25 16:36:49.223 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:36:49.295 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:36:49.304 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 0(Long), 2(Long)
+2019-12-25 16:36:49.321 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:36:49.353 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:36:49.355 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:36:49.367 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:36:49.390 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:36:49.390 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:36:49.397 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:36:49.430 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:36:49.442 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:36:49.455 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:37:13.052 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check 
+2019-12-25 16:37:13.053 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:37:13.056 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:37:13.057 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 0(Long), 2(Long)
+2019-12-25 16:37:13.068 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:37:13.071 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:37:13.072 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:37:13.082 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:37:13.085 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:37:13.085 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:37:13.088 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:37:13.099 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:37:13.100 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:37:13.102 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:37:41.144 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check 
+2019-12-25 16:37:41.146 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:37:41.156 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:37:41.156 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 0(Long), 2(Long)
+2019-12-25 16:37:41.160 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:37:41.171 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:37:41.173 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:37:41.181 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:37:41.190 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:37:41.191 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:37:41.197 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:37:41.207 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:37:41.209 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:37:41.220 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:38:32.595 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check 
+2019-12-25 16:38:32.612 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:38:32.645 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:38:32.649 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 0(Long), 5(Long)
+2019-12-25 16:38:32.665 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 5
+2019-12-25 16:38:32.684 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:38:32.687 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:38:32.698 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:38:32.712 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:38:32.714 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:38:32.729 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:38:32.743 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:38:32.745 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:38:32.754 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:38:44.912 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check 
+2019-12-25 16:38:44.912 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 
+2019-12-25 16:38:44.920 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:38:44.921 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: 0(Long), 1(Long)
+2019-12-25 16:38:44.926 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 1
+2019-12-25 16:38:44.938 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:38:44.941 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:38:44.959 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:38:44.964 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:38:44.967 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:38:44.974 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:40:28.687 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 16:40:28.704 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:40:28.728 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:40:28.730 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String), 0(Long), 1(Long)
+2019-12-25 16:40:28.741 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 1
+2019-12-25 16:40:28.750 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:40:28.751 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:40:28.762 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:40:28.768 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:40:28.769 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:40:28.774 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:40:34.923 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 16:40:34.924 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:40:34.934 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:40:34.935 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String), 0(Long), 2(Long)
+2019-12-25 16:40:34.938 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:40:34.942 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:40:34.944 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:40:34.948 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:40:34.955 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:40:34.956 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:40:34.958 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:40:34.962 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:40:34.964 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:40:34.970 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:40:42.560 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 16:40:42.561 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:40:42.563 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:40:42.564 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String), 2(Long), 2(Long)
+2019-12-25 16:40:42.566 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 0
+2019-12-25 16:40:55.417 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 16:40:55.418 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String)
+2019-12-25 16:40:55.421 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id FROM lv_check WHERE (lv_teacher_num = ?) ORDER BY lv_check_id DESC LIMIT ?,? 
+2019-12-25 16:40:55.422 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - ==> Parameters: T171304(String), 0(Long), 2(Long)
+2019-12-25 16:40:55.428 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectPage - <==      Total: 2
+2019-12-25 16:40:55.431 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:40:55.432 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 16:40:55.434 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:40:55.443 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 16:40:55.445 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 16:40:55.448 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 16:40:55.452 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 16:40:55.454 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 16:40:55.463 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 16:59:36.921 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 16:59:36.924 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 16:59:36.928 [http-nio-8080-exec-9] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 16:59:36.930 [http-nio-8080-exec-9] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==>  Preparing: select u.*,r.*,p.* from lv_user u INNER JOIN lv_roles r on u.lv_role = r.rid INNER JOIN lv_role_permission pr on pr.lv_rid = r.rid INNER JOIN lv_permission p on p.pid = pr.lv_pid where u.lv_user_num = ? 
+2019-12-25 16:59:36.933 [http-nio-8080-exec-9] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - ==> Parameters: 1713011332(String)
+2019-12-25 16:59:36.946 [http-nio-8080-exec-9] DEBUG c.l.a.modules.dao.LvUserDao.findUseMsgByUserNum - <==      Total: 1
+2019-12-25 18:12:13.428 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_user_num = ? AND lv_status <> ?) 
+2019-12-25 18:12:13.828 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==> Parameters: 1713011332(String), ing(String)
+2019-12-25 18:12:14.143 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - <==      Total: 2
+2019-12-25 18:13:41.434 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_user_num = ? AND lv_status <> ?) 
+2019-12-25 18:13:41.462 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==> Parameters: 1713011332(String), ing(String)
+2019-12-25 18:13:41.512 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - <==      Total: 2
+2019-12-25 20:23:03.163 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_user_num = ? AND lv_status <> ?) 
+2019-12-25 20:23:03.203 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==> Parameters: 1713011332(String), ing(String)
+2019-12-25 20:23:03.228 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - <==      Total: 2
+2019-12-25 20:23:18.924 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 20:23:18.925 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 20:23:18.928 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 20:23:18.937 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 20:23:18.938 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 20:23:18.942 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 20:23:18.951 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id,lv_book FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 20:23:18.957 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 20:23:18.960 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 20:23:18.974 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:23:18.975 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 20:23:18.979 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:23:18.992 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:23:18.992 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 20:23:19.002 [http-nio-8080-exec-4] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:23:27.603 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 20:23:27.607 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1576555882(String)
+2019-12-25 20:23:27.616 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 20:23:27.619 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 20:23:27.627 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 20:23:27.632 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 20:23:27.637 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id,lv_book FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 20:23:27.646 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171301(String)
+2019-12-25 20:23:27.662 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 3
+2019-12-25 20:23:27.669 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:23:27.670 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 20:23:27.685 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:24:55.276 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 20:24:55.313 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1576555882(String)
+2019-12-25 20:24:55.348 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 20:24:55.416 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 20:24:55.417 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 20:24:55.424 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 20:24:55.433 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id,lv_book FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 20:24:55.434 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171301(String)
+2019-12-25 20:24:55.442 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 3
+2019-12-25 20:24:55.452 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:24:55.453 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 20:24:55.462 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:25:02.418 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 20:25:02.420 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 20:25:02.435 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 20:25:02.456 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 20:25:02.458 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 20:25:02.464 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 20:25:02.473 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id,lv_book FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 20:25:02.475 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 20:25:02.496 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 20:25:02.513 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:25:02.520 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 20:25:02.531 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:25:02.543 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:25:02.549 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 20:25:02.553 [http-nio-8080-exec-5] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:25:05.612 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 20:25:05.625 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1576555882(String)
+2019-12-25 20:25:05.635 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 20:25:05.651 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 20:25:05.652 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 20:25:05.660 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 20:25:05.680 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id,lv_book FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 20:25:05.680 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171305(String)
+2019-12-25 20:25:05.698 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 1
+2019-12-25 20:25:05.703 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:25:05.703 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 20:25:05.707 [http-nio-8080-exec-6] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:25:31.274 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 20:25:31.276 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 20:25:31.279 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 20:25:31.281 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 20:25:31.282 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 20:25:31.296 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 20:25:31.309 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id,lv_book FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 20:25:31.312 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 20:25:31.327 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 20:25:31.340 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:25:31.341 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 20:25:31.345 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:25:31.363 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:25:31.364 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 20:25:31.376 [http-nio-8080-exec-7] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:25:48.796 [http-nio-8080-exec-8] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_user_num = ? AND lv_status <> ?) 
+2019-12-25 20:25:48.797 [http-nio-8080-exec-8] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==> Parameters: 1713011332(String), ing(String)
+2019-12-25 20:25:48.799 [http-nio-8080-exec-8] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - <==      Total: 2
+2019-12-25 20:48:16.885 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_user_num = ? AND lv_status <> ?) 
+2019-12-25 20:48:16.914 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - ==> Parameters: 1713011332(String), ing(String)
+2019-12-25 20:48:16.954 [http-nio-8080-exec-2] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectList - <==      Total: 2
+2019-12-25 20:48:28.135 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE lv_id=? 
+2019-12-25 20:48:28.136 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - ==> Parameters: 1577180721(String)
+2019-12-25 20:48:28.143 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectById - <==      Total: 1
+2019-12-25 20:48:28.155 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==>  Preparing: SELECT lv_user_id,lv_collage,lv_role,lv_teacher_num,lv_user_phone,lv_user_password,lv_user_create_time,lv_user_name,lv_user_num FROM lv_user WHERE (lv_user_num = ?) 
+2019-12-25 20:48:28.156 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - ==> Parameters: 1713011332(String)
+2019-12-25 20:48:28.160 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvUserDao.selectOne - <==      Total: 1
+2019-12-25 20:48:28.169 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==>  Preparing: SELECT lv_check_id,lv_teacher_num,lv_id,lv_book FROM lv_check WHERE (lv_teacher_num = ?) 
+2019-12-25 20:48:28.170 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - ==> Parameters: T171304(String)
+2019-12-25 20:48:28.174 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvCheckDao.selectList - <==      Total: 2
+2019-12-25 20:48:28.184 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:48:28.185 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1575722433(String)
+2019-12-25 20:48:28.189 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1
+2019-12-25 20:48:28.200 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==>  Preparing: SELECT lv_id,lv_relative_phone,lv_length,lv_end_time_long,lv_picture,lv_reason,lv_relative_name,lv_end_time,lv_status,lv_user_num,lv_process_instance_id,lv_create_time,lv_apply_detail,lv_begin_time,lv_book,lv_relative_type FROM lv_leave WHERE (lv_id = ?) 
+2019-12-25 20:48:28.201 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - ==> Parameters: 1577180721(String)
+2019-12-25 20:48:28.206 [http-nio-8080-exec-3] DEBUG com.lv.adminsys.modules.dao.LvLeaveDao.selectOne - <==      Total: 1

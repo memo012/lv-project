@@ -3,6 +3,7 @@ package com.lv.adminsys.modules.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lv.adminsys.modules.entity.LvTeacherEntity;
 import com.lv.adminsys.modules.entity.LvUserEntity;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -21,5 +22,6 @@ public interface LvTeacherDao extends BaseMapper<LvTeacherEntity> {
      * @return
      */
     LvTeacherEntity findUseMsgByTeacherNum(String teacherNum);
+
 
 }
