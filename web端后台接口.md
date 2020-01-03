@@ -532,7 +532,7 @@ userName： 账号
 
 1. **接口名:** `api/v1/user/updateUserMessage`
 
-2. 请求方式: `GET`
+2. 请求方式: `POST`
 
 3. 请求接口方法:
 
