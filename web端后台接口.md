@@ -447,15 +447,12 @@ accountType： 账号类型
 4. 请求参数:(参数)
 
 ```Java
-lvMessageId： 消息id
+lvMessageId： 账号
 accountType： 账号类型
 ```
 
 **请求参数解释：**
 
-- `lvMessageId `详解
-  - 若登录者为老师， 传入的`lvMessageId` 的值为`lvMessageId`  值
-  - 若登录着为学生，传入的`lvMessageId` 的值为`lvId`  值
 - `accountType` 详解
   - 若登录者为老师，传入的`accountType `的值为 整型 1
   - 若登录者为学生，传入的`accountType` 的值为 整型 0 
